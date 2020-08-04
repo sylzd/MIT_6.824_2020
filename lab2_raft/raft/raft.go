@@ -70,13 +70,13 @@ type Raft struct {
 	// Look at the paper's Figure 2 for a description of what
 	// state a Raft server must maintain.
 
-	// Persistent sate on all servers
+	// Persistent sate on All Servers
 	term       int // the same as currentTerm: latest term server has seen (initialized to 0 on first boot, increases monotonically)
 	votedFor   int // candidateId that received vote in current term (none or initialized to -1)
 	logEntries []LogEntry
 	applyCh    chan ApplyMsg
 
-	// Volatile state on all servers
+	// Volatile state on All Servers
 	commitIndex int // index of highest log entry known to be committed (initialized to 0, increases monotonically
 	lastApplied int // index of highest log entry applied to state machine (initialized to 0, increases monotonically)
 
@@ -248,6 +248,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.electionTimer = time.NewTimer(randTimeout(ElectionTimeout))
 
 	// leader/follower/candidate: 应用已提交日志到kv层
+	// All Servers rule: If commitIndex > lastApplied: increment lastApplied, apply log[lastApplied] to state machine (§5.3)
 	go func() {
 		for {
 			time.Sleep(10 * time.Millisecond)

@@ -79,7 +79,8 @@ func (rf *Raft) SendHeartbeat(server int) {
 	}
 	reply := AppendEntriesReply{}
 	rf.sendAppendEntriesWithTimeout(RPCTimeout, server, &args, &reply)
-	// all server rule: 发现自己leader过期，则重置自己为普通Follower，并term提升, 防止有老leader没跟上时代
+	// All Servers rule: 发现自己leader过期，则重置自己为普通Follower，并term提升, 防止有老leader没跟上时代
+	// If RPC request or response contains term T > currentTerm: set currentTerm = T, convert to follower (§5.1)
 	if rf.term < reply.Term {
 		DPrintf("rf:%d term:%d is older than %d, change term to %d and be follower", rf.me, rf.term, reply.Term, reply.Term)
 		rf.term = reply.Term
@@ -139,16 +140,8 @@ func (rf *Raft) commitApplyLog() {
 			if m >= i {
 				agreeCount++
 				if agreeCount > len(rf.peers)/2 {
-					// 已经match了大多数, 则设为commit, 并传给applyCh
-					//msg := ApplyMsg{
-					//	CommandValid: true,
-					//	Command:      rf.logEntries[i].Command,
-					//	CommandIndex: rf.logEntries[i].Index,
-					//}
-					// all server rule: TODO 提出来，单独执行
 					rf.commitIndex = i
 					DPrintf("rf:%d committed index:%+v\n", rf.me, i)
-					// rf.applyLog(msg)
 					break
 				}
 			}
@@ -160,11 +153,14 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	DPrintf("rf:%d term:%d get leader:%d AppendEntries Args: %+v, my log: %+v commited:%d", rf.me, rf.term, args.LeaderId, args, rf.logEntries, rf.commitIndex)
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
+
+	// Followers Rule 1: Respond to RPCs from candidates and leaders
 	// 每次收到leader的rpc(心跳/日志)，都重置一下, 以免自己发起选举或下次选举
 	resetTimer(rf.electionTimer, ElectionTimeout)
 
-	// 0. all server rule: 发现自己过期，则重置自己为普通Follower，并term提升, 防止有老follower没跟上时代
-	if rf.term < args.Term {
+	// All Servers rule: 发现自己过期，则重置自己为普通Follower，并term提升, 防止有老follower没跟上时代
+	// If RPC request or response contains term T > currentTerm: set currentTerm = T, convert to follower (§5.1)
+	if args.Term > rf.term {
 		rf.term = args.Term
 		reply.Term = rf.term
 		reply.Success = false

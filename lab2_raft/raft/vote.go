@@ -41,6 +41,8 @@ type RequestVoteReply struct {
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
+
+	// Followers Rule 1: Respond to RPCs from candidates and leaders
 	resetTimer(rf.electionTimer, ElectionTimeout)
 	rf.mu.Lock()
 	DPrintf("rf:%d get RequestVote(%+v) my log:%+v", rf.me, args, rf.logEntries)
@@ -49,7 +51,8 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	reply.Term = rf.term
 	reply.VoteGranted = false
 
-	// 0. all server rule: 大于本节点term，则重置自己为普通Follower，并term提升, 后面正常投票
+	// All Servers rule: 大于本节点term，则重置自己为普通Follower，并term提升, 后面正常投票
+	// If RPC request or response contains term T > currentTerm: set currentTerm = T, convert to follower (§5.1)
 	if args.Term > rf.term {
 		rf.changeRole(Follower)
 		rf.term = args.Term
