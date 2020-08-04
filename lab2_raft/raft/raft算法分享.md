@@ -144,10 +144,12 @@ leader通过心跳机制与follower保持联系，失联会触发选举。选举
 4. 选举者处理选举请求
     ``RequestVote``--RPC
    1. term+index没有自己新，则直接拒绝，并返回更新的term+index
+   
    2. 自己已经投过其他节点，则拒绝重复投票
+   
    3. 如果candidate的term+index合格且自己没投过票，那么就投给他，自己也不用再投了，老老实实当follower
-
-
+   
+      
 
 ## 2. 日志复制
 
@@ -157,6 +159,8 @@ leader通过心跳机制与follower保持联系，失联会触发选举。选举
 
 ### 主要逻辑
 
+`TestBasicAgree2B`
+
 0. **kv接受请求**：kv层收到客户端请求，转发给raft层
 
 1.  **kv转给raft ：**raft层接收到kv层转发过来的客户端请求，开始执行操作`Start(command)`，并开始日志复制，并立即返回返回（index, term, isLeader）给kv层，不用管结果。
@@ -164,6 +168,23 @@ leader通过心跳机制与follower保持联系，失联会触发选举。选举
 3.  **kv-leader应用日志**：更新自己的`commitIndex`，并将`ApplyMsg{command, index}`传给一个`applyCh`, kv层从`applyCh`中读取消息后，开始执行请求，并返回给客户端 
 
 4. **kv-follower应用日志**：follower收到下一个`AppendEntries`请求((为了减少消息来回次数))中的`LeaderCommit`(即leader的`commitIndex`，已提交日志的最大index)时，开始apply日志到自己本地的kv层，直到达到`LeaderCommit`
+
+
+
+### 异常处理逻辑
+
+1. `TestFailAgree2B`3个节点中的1个节点(非leader)挂掉后，剩下2个节点依然能通过`majority`提交日志；重连后，通过apply补偿，逐步追回。
+2. ``TestFailNoAgree2B``5个节点中的3个节点挂掉后(可能包含leader)，**leader挂掉会发生不一致的情况（详细说明见图7）**。通过以下步骤能恢复一致性：
+   1. `AppendEntries`RPC请求中加入日志的一致性检查：
+      1. 检查项1：leader的 (prevLogTerm, prevLogIndex）（新日志前一条日志）与follower不匹配，则说明不一致
+      2. 检查项2：follower中的日志缺失太多，比prevLogIndex要小
+      3. 检查项3：follower中的历史日志有与leader不匹配的，则删除该不匹配日志及之后所有日志
+   2. 一致性修复：对应`nextIndex`回退一格（leader的nextIndex[followerID]-1），下一次leader会多发送一条历史日志，用来覆写follower的不合群或不存在的日志，通过迭代回退，最终所有日志会趋于一致。
+
+3. `TestRejoin2B`Leader回归的情况：老leader挂掉，新leader上位；新leader又挂掉，老leader回来，也会造成leader挂掉，主要会利用到`2.1.2`一致性检查项
+4. `TestBackup2B`快速回退不正确的日志，主要会利用到`2.1.3`一致性检查项，这里可以直接回退到错误日志处，比一格格回退快一点。
+
+
 
 
 

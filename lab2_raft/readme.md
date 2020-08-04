@@ -15,6 +15,7 @@
   - consul依赖的raft: https://github.com/hashicorp/raft
   - tidb依赖的raft: https://github.com/tikv/tikv
   - etcd依赖的raft: https://github.com/etcd-io/etcd
+- raft算法分享：[raft算法分享](./raft/raft算法分享.md)
 
 
 ### 1. 获取实验初始代码
@@ -116,10 +117,10 @@ PASS
 
    实现`leader`和`follower`的操作日志记录。
 
-- [ ] 实现`Start()`, 先通过基本的测试`TestBasicAgree2B`,然后按照论文图2，写`AppendEntries`的RPC代码，完成log的发送和接收功能
-- [ ] 实现选举的限制，参考论文`section 5.4.1`
+- [x] 实现`Start()`, 先通过基本的测试`TestBasicAgree2B`,然后按照论文图2，写`AppendEntries`的RPC代码，完成log的发送和接收功能
+- [x] 实现选举的限制，参考论文`section 5.4.1`
 - [ ] One way to fail to reach agreement in the early Lab 2B tests is to hold repeated elections even though the leader is alive. Look for bugs in election timer management, or not sending out heartbeats immediately after winning an election.（这段话，暂时没看懂，到时候结合代码看一下TODO）
-- [ ] 在`for-loop`这样的重复性事件检查代码中，加入一些小停顿,如`sync.cond`,或完成一次直接睡一会儿`time.Sleep(10 * time.Millisecond)`
+- [ ] 在`for-loop`这样的重复性事件检查代码中，加入一些小停顿,如`sync.cond`,或完成一次直接睡一会儿`time.Sleep(10 * time.Millisecond)`(TODO:这里应该是说的applyCh)
 - [ ] 可以多重构几次自己的代码，让代码更干净，参考 [structure](https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt), [locking](https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt), and [guide](https://thesquareplanet.com/blog/students-guide-to-raft/) 页面
 - [ ] 运行测试`time go test -run 2B`
 
@@ -130,13 +131,46 @@ PASS
 1. 基本日志共识机制
 2. RPC请求的正确性（通过字节数检查）
 3. 当其中1个follower节点挂掉，日志共识机制是否ok
+4. 当很多个follower节点挂掉，日志共识机制是否无法工作
+5. 并发测试
+6. 老leader挂掉，新leader上位；新leader又挂掉，老leader回来。确保这个过程已提交日志保留，term小但未提交的日志被清除
+7. 快速回滚follower上不一致的日志
+8. 确保RPC请求数量没有太多
 
 ```
 === RUN   TestBasicAgree2B
 Test (2B): basic agreement ...
-  ... Passed --   0.9  3   18    5064    3
+  ... Passed --   0.9  3   15    4196    3
 --- PASS: TestBasicAgree2B (0.90s)
+=== RUN   TestRPCBytes2B
+Test (2B): RPC byte count ...
+  ... Passed --   1.7  3   46  113596   11
+--- PASS: TestRPCBytes2B (1.68s)
+=== RUN   TestFailAgree2B
+Test (2B): agreement despite follower disconnection ...
+  ... Passed --   7.2  3  148   41478    7
+--- PASS: TestFailAgree2B (7.16s)
+=== RUN   TestFailNoAgree2B
+Test (2B): no agreement if too many followers disconnect ...
+  ... Passed --   3.7  5  120   27908    3
+--- PASS: TestFailNoAgree2B (3.75s)
+=== RUN   TestConcurrentStarts2B
+Test (2B): concurrent Start()s ...
+  ... Passed --   1.2  3   24    6804    6
+--- PASS: TestConcurrentStarts2B (1.15s)
+=== RUN   TestRejoin2B
+Test (2B): rejoin of partitioned leader ...
+  ... Passed --   5.5  3   76   19733    4
+--- PASS: TestRejoin2B (5.50s)
+=== RUN   TestBackup2B
+Test (2B): leader backs up quickly over incorrect follower logs ...
+--- PASS: TestBackup2B (1.17s)
+=== RUN   TestCount2B
+Test (2B): RPC counts aren't too high ...
+  ... Passed --   2.7  3   90   25924   12
+--- PASS: TestCount2B (2.71s)
 PASS
+ok      _/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft    24.437s
 ```
 
 
@@ -144,16 +178,22 @@ PASS
 #### 经验
 
 - raft层和kv层（状态机存储层）要区分开来，raft层仅处理选举和日志复制这两件事，日志完成提交之后传给applyCh，raft的工作就完了，客户端实际的请求执行还是在kv层。
+
 - 基础实现：kv接受请求-> kv转给raft -> raft完成日志大多数提交 -> kv-leader应用日志 -> kv-leader回复客户端请求->kv-follower异步apply日志
 
+- **只有leader才能SendHeartbeat**, 重新选举不需要非leader发送SendHeartbeat。（调试了很久，发现了自己埋的坑。。。不要自己搞创造。。。）
 
+- 日志一定要打到关键位置，比如每个raft节点的日志变化，这样能比较容易分析是复制的哪个阶段出了问题。这part调试难度较大(每完成1个测试，还要确保前面的测试也能通过)。
 
+- 分清日志的term和节点的term，某一条的term是不会改变的，只有可能被覆写掉
 
-3. 
+- leader维护的follower要复制的下一条日志索引`rf.nextIndex[server]` 和 已复制的最后一条索引`rf.matchIndex[server]` 总是同步变动
 
+- 发送心跳的leader判断要在`SendHeartbeat`外部判断（否则可能造成嵌套型死锁），判断ok后再对所有节点发送心跳。
 
+- `Rejoin测试`：**已经提交的日志不可能被覆写，拥有所有已提交日志的follower才能成为leader**。简单说因为包含未提交日志的节点，无论有多长，要么term太低（安全性证明5.4.3）
 
-
+  
 
 ### 4. PART - C 实验
 
