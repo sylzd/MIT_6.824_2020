@@ -386,7 +386,7 @@ func TestBackup2B(t *testing.T) {
 
 	cfg.begin("Test (2B): leader backs up quickly over incorrect follower logs")
 
-	// lzd --阶段1--: 这里相当于TestBasickAgree2B
+	// lzd --阶段1--: 这里相当于TestBasicAgree2B
 	cfg.one(rand.Int(), servers, true)
 
 	// lzd --阶段2--: 挂掉3个follower，leader无法commit

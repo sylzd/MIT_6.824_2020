@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-// TODO
 type LogEntry struct {
 	Term    int
 	Index   int
@@ -138,15 +137,15 @@ func (rf *Raft) commitApplyLog() {
 				agreeCount++
 				if agreeCount > len(rf.peers)/2 {
 					// 已经match了大多数, 则设为commit, 并传给applyCh
-					msg := ApplyMsg{
-						CommandValid: true,
-						Command:      rf.logEntries[i].Command,
-						CommandIndex: rf.logEntries[i].Index,
-					}
+					//msg := ApplyMsg{
+					//	CommandValid: true,
+					//	Command:      rf.logEntries[i].Command,
+					//	CommandIndex: rf.logEntries[i].Index,
+					//}
 					// all server rule: TODO 提出来，单独执行
 					rf.commitIndex = i
 					DPrintf("rf:%d committed index:%+v\n", rf.me, i)
-					rf.applyLog(msg)
+					// rf.applyLog(msg)
 					break
 				}
 			}
@@ -183,9 +182,9 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	// 3.1 一致性检查(leader crash 会出现): (prevLogTerm, prevLogIndex）新日志前一条日志不匹配(index一样但term不一样),则leader[followerID].NextIndex回退一格，覆写冲突日志
 	if args.PrevLogIndex > 0 && args.PrevLogIndex <= len(rf.logEntries)-1 && rf.logEntries[args.PrevLogIndex].Term != args.PervLogTerm {
 		reply.Success = false
-		// 告诉leader，一致性检查没通过，将NextIndex-1
+		// 告诉leader，一致性检查没通过，删掉不匹配日志，将NextIndex-1
 		rf.logEntries = rf.logEntries[:args.PrevLogIndex]
-		reply.NextIndex = -1
+		reply.NextIndex = args.PrevLogIndex
 		rf.changeRole(Follower)
 		return
 	}
@@ -198,7 +197,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		return
 	}
 
-	// 3.3 一致性检查(leader crash 会出现)：follower历史日志与新的append日志冲突，则删掉冲突日志及之后的所有日志，且leader[followerID].NextIndex回退一格，直到退到删除后日志末尾
+	// 3.3 一致性检查(leader crash 会出现)：follower历史日志与新的append日志冲突，则删掉冲突日志及之后的所有日志，且leader[followerID].NextIndex回退到剩余日志的末尾
 	for _, entry := range args.Entries {
 		if entry.Index < len(rf.logEntries) && rf.logEntries[entry.Index].Term != entry.Term {
 			rf.logEntries = rf.logEntries[:entry.Index]
@@ -219,33 +218,12 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	reply.NextIndex = lastIndex + 1
 	reply.Success = true
 
-	// 4.1 更新rf.commitIndex
+	// 5. 更新rf.commitIndex
 	if args.LeaderCommit > rf.commitIndex {
 		rf.commitIndex = args.LeaderCommit
 		if args.LeaderCommit > lastIndex {
 			rf.commitIndex = lastIndex
 		}
 	}
-	// 4.2 应用已提交的日志
-	for i := rf.lastApplied + 1; i <= rf.commitIndex; i++ {
-		DPrintf("raft:%d lastApplied:%d commitIndex:%d\n", rf.me, rf.lastApplied, rf.commitIndex)
-		msg := ApplyMsg{
-			CommandValid: true,
-			//TODO: 有时候会超长，单独拉出去，不放在RPC里
-			Command:      rf.logEntries[i].Command,
-			CommandIndex: i,
-		}
-		rf.applyLog(msg)
-	}
-}
 
-func (rf *Raft) applyLog(msg ApplyMsg) {
-	// 心跳包，不需要apply
-	if msg.Command == nil {
-		return
-	}
-	//DPrintf("apply:%+v\n", msg)
-	rf.applyCh <- msg
-	DPrintf("rf:%d applied:%+v\n", rf.me, msg)
-	rf.lastApplied++
 }

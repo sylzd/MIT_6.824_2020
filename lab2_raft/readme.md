@@ -120,9 +120,9 @@ PASS
 - [x] 实现`Start()`, 先通过基本的测试`TestBasicAgree2B`,然后按照论文图2，写`AppendEntries`的RPC代码，完成log的发送和接收功能
 - [x] 实现选举的限制，参考论文`section 5.4.1`
 - [ ] One way to fail to reach agreement in the early Lab 2B tests is to hold repeated elections even though the leader is alive. Look for bugs in election timer management, or not sending out heartbeats immediately after winning an election.（这段话，暂时没看懂，到时候结合代码看一下TODO）
-- [ ] 在`for-loop`这样的重复性事件检查代码中，加入一些小停顿,如`sync.cond`,或完成一次直接睡一会儿`time.Sleep(10 * time.Millisecond)`(TODO:这里应该是说的applyCh)
-- [ ] 可以多重构几次自己的代码，让代码更干净，参考 [structure](https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt), [locking](https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt), and [guide](https://thesquareplanet.com/blog/students-guide-to-raft/) 页面
-- [ ] 运行测试`time go test -run 2B`
+- [x] 在`for-loop`这样的重复性事件检查代码中，加入一些小停顿,如`sync.cond`,或完成一次直接睡一会儿`time.Sleep(10 * time.Millisecond)`(循环读取applyCh)
+- [x] 可以多重构几次自己的代码，让代码更干净，参考 [structure](https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt), [locking](https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt), and [guide](https://thesquareplanet.com/blog/students-guide-to-raft/) 页面 （尤其是完成一些大测试之后，可以去掉无用的代码，便于下次测试通过）
+- [x] 运行测试`time go test -run 2B`
 
 
 
@@ -177,21 +177,42 @@ ok      _/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/la
 
 #### 经验
 
-- raft层和kv层（状态机存储层）要区分开来，raft层仅处理选举和日志复制这两件事，日志完成提交之后传给applyCh，raft的工作就完了，客户端实际的请求执行还是在kv层。
+- raft层和kv层（状态机存储层）区分：
 
-- 基础实现：kv接受请求-> kv转给raft -> raft完成日志大多数提交 -> kv-leader应用日志 -> kv-leader回复客户端请求->kv-follower异步apply日志
+  raft层仅处理选举和日志复制这两件事，日志完成提交之后传给applyCh，raft的工作就完了，客户端实际的请求执行还是在kv层。
 
-- **只有leader才能SendHeartbeat**, 重新选举不需要非leader发送SendHeartbeat。（调试了很久，发现了自己埋的坑。。。不要自己搞创造。。。）
+- 基础实现：
 
-- 日志一定要打到关键位置，比如每个raft节点的日志变化，这样能比较容易分析是复制的哪个阶段出了问题。这part调试难度较大(每完成1个测试，还要确保前面的测试也能通过)。
+  kv接受请求-> kv转给raft -> raft完成日志大多数提交 -> kv-leader应用日志 -> kv-leader回复客户端请求->kv-follower异步apply日志
 
-- 分清日志的term和节点的term，某一条的term是不会改变的，只有可能被覆写掉
+- **只有leader才能SendHeartbeat**：
 
-- leader维护的follower要复制的下一条日志索引`rf.nextIndex[server]` 和 已复制的最后一条索引`rf.matchIndex[server]` 总是同步变动
+  重新选举不需要非leader发送SendHeartbeat。（调试了很久，发现了自己埋的坑。。。不要自己搞创造。。。）
 
-- 发送心跳的leader判断要在`SendHeartbeat`外部判断（否则可能造成嵌套型死锁），判断ok后再对所有节点发送心跳。
+- 关键位置埋好调试代码：
 
-- `Rejoin测试`：**已经提交的日志不可能被覆写，拥有所有已提交日志的follower才能成为leader**。简单说因为包含未提交日志的节点，无论有多长，要么term太低（安全性证明5.4.3）
+  比如每个raft节点的日志变化，这样能比较容易分析是复制的哪个阶段出了问题。这part调试难度较大(每完成1个测试，还要确保前面的测试也能通过)。
+
+- 分清日志的term和节点的term：
+
+  某一条的term是不会改变的，只有可能被覆写掉
+
+- `rf.nextIndex[server]`和`rf.matchIndex[server]`：
+
+  leader维护的follower要复制的下一条日志索引`rf.nextIndex[server]` 和 已复制的最后一条索引`rf.matchIndex[server]` 总是同步变动
+
+- Leader发送心跳：
+
+  leader判断要在`SendHeartbeat`外部判断（否则可能造成嵌套型死锁），判断ok后再对所有节点发送心跳。
+
+- `Rejoin测试`：
+
+  **已经提交的日志不可能被覆写，因为拥有所有已提交日志的follower才能成为leader(领导人完备特性)**。证明(实现过程中需要注意的点，详细证明见5.4.3)：包含未提交日志的节点S1 给 包含已提交日志节点S2 发送vote请求时，发现
+
+  1. S2发现日志比S1新（推导链如下)
+     1. leader才能提交日志+leader只能添加日志=》已提交日志一定是按term+index顺序
+     2. 已提交日志一定是按term+index顺序+S2有已提交但S1没有的日志=》S2日志比S1新
+  2. 拒绝S1当leader（选举限制-拒绝日志比自己旧的当leader）
 
   
 

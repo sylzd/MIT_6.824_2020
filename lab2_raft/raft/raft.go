@@ -247,21 +247,25 @@ func Make(peers []*labrpc.ClientEnd, me int,
 
 	rf.electionTimer = time.NewTimer(randTimeout(ElectionTimeout))
 
-	//go func() {
-	//	for {
-	//		time.Sleep(10 * time.Millisecond)
-	//		if rf.lastApplied < rf.commitIndex && rf.lastApplied < len(rf.logEntries)-1 {
-	//			fmt.Printf("raft:%d lastApplied:%d commitIndex:%d\n", rf.me, rf.lastApplied, rf.commitIndex)
-	//			rf.lastApplied++
-	//			msg := ApplyMsg{
-	//				CommandValid: true,
-	//				Command:      rf.logEntries[rf.lastApplied].Command,
-	//				CommandIndex: rf.lastApplied + 1,
-	//			}
-	//			rf.applyLog(msg)
-	//		}
-	//	}
-	//}()
+	// leader/follower/candidate: 应用已提交日志到kv层
+	go func() {
+		for {
+			time.Sleep(10 * time.Millisecond)
+			rf.mu.Lock()
+			if rf.lastApplied < rf.commitIndex {
+				rf.lastApplied++
+				msg := ApplyMsg{
+					CommandValid: true,
+					Command:      rf.logEntries[rf.lastApplied].Command,
+					CommandIndex: rf.lastApplied,
+				}
+				rf.applyCh <- msg
+				DPrintf("rf:%d lastApplied:%d commitIndex:%d applied:%+v\n", rf.me, rf.lastApplied, rf.commitIndex, msg)
+			}
+			rf.mu.Unlock()
+		}
+	}()
+
 	// leader/follower/candidate: ElectionTimetout触发选举
 	go func() {
 		for {
@@ -304,7 +308,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	go func() {
 		for {
 			time.Sleep(time.Second)
-			DDPrintf("raft: %d, committed:%d logs: %+v", rf.me, rf.commitIndex, rf.logEntries)
+			DPrintf("raft: %d, committed:%d logs: %+v", rf.me, rf.commitIndex, rf.logEntries)
 		}
 	}()
 	//lzd 2A debug: 以下这段代码可以是TestInitialElection2A需要达到的结果，但实际上需要由选举完成
