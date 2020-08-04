@@ -1,0 +1,1028 @@
+*** Starting wc test.
+2020/06/14 19:49:21 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/14 19:49:21 file: ../pg-being_ernest.txt enqueue
+2020/06/14 19:49:21 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/14 19:49:22 worker-2 registerd
+2020/06/14 19:49:22 worker-3 registerd
+2020/06/14 19:49:22 worker-1 registerd
+2020/06/14 19:49:22 file: ../pg-being_ernest.txt dequeue
+2020/06/14 19:49:22 file: ../pg-dorian_gray.txt enqueue
+2020/06/14 19:49:22 get task &{WorkerID:3 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:49:22.431932 +0800 CST m=+1.041092996}
+2020/06/14 19:49:22 file: ../pg-dorian_gray.txt dequeue
+2020/06/14 19:49:22 file: ../pg-frankenstein.txt enqueue
+2020/06/14 19:49:22 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:49:22.432243 +0800 CST m=+1.041403583}
+2020/06/14 19:49:22 file: ../pg-frankenstein.txt dequeue
+2020/06/14 19:49:22 file: ../pg-grimm.txt enqueue
+2020/06/14 19:49:22 get task &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:49:22.432431 +0800 CST m=+1.041591604}
+2020/06/14 19:49:22 task: &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:49:22.432431 +0800 CST}
+working on &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:49:22.432431 +0800 CST}
+2020/06/14 19:49:22 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:49:22.432243 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:49:22.432243 +0800 CST}
+2020/06/14 19:49:22 task: &{WorkerID:3 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:49:22.431932 +0800 CST}
+working on &{WorkerID:3 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:49:22.431932 +0800 CST}
+Set task:3 state:2
+Set task:1 state:2
+Set task:2 state:2
+Set task:1 state:3
+2020/06/14 19:49:22 file: ../pg-grimm.txt dequeue
+2020/06/14 19:49:22 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/14 19:49:22 get task &{WorkerID:3 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:49:22.6005 +0800 CST m=+1.209657957}
+2020/06/14 19:49:22 task: &{WorkerID:3 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:49:22.6005 +0800 CST}
+working on &{WorkerID:3 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:49:22.6005 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+2020/06/14 19:49:22 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/14 19:49:22 file: ../pg-metamorphosis.txt enqueue
+2020/06/14 19:49:22 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:49:22.92154 +0800 CST m=+1.530693603}
+2020/06/14 19:49:22 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:49:22.92154 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:49:22.92154 +0800 CST}
+Set task:5 state:2
+Set task:2 state:3
+2020/06/14 19:49:22 file: ../pg-metamorphosis.txt dequeue
+2020/06/14 19:49:22 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/14 19:49:22 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:49:22.941492 +0800 CST m=+1.550645652}
+2020/06/14 19:49:22 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:49:22.941492 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:49:22.941492 +0800 CST}
+Set task:6 state:2
+Set task:6 state:3
+2020/06/14 19:49:23 file: ../pg-tom_sawyer.txt enqueue
+2020/06/14 19:49:23 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/14 19:49:23 get task &{WorkerID:2 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:49:23.081291 +0800 CST m=+1.690442272}
+2020/06/14 19:49:23 task: &{WorkerID:2 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:49:23.081291 +0800 CST}
+working on &{WorkerID:2 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:49:23.081291 +0800 CST}
+Set task:7 state:2
+Set task:4 state:3
+2020/06/14 19:49:23 file: ../pg-tom_sawyer.txt dequeue
+2020/06/14 19:49:23 get task &{WorkerID:3 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:49:23.170236 +0800 CST m=+1.779385560}
+2020/06/14 19:49:23 task: &{WorkerID:3 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:49:23.170236 +0800 CST}
+working on &{WorkerID:3 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:49:23.170236 +0800 CST}
+Set task:8 state:2
+Set task:5 state:3
+Set task:8 state:3
+Set task:7 state:3
+2020/06/14 19:49:25 Heartbeat: worker-1 task-5 time-2020-06-14 19:49:25.436095 +0800 CST m=+4.045211627
+2020/06/14 19:49:25 Heartbeat: worker-2 task-7 time-2020-06-14 19:49:25.436604 +0800 CST m=+4.045720561
+2020/06/14 19:49:25 Heartbeat: worker-3 task-8 time-2020-06-14 19:49:25.436683 +0800 CST m=+4.045800211
+2020/06/14 19:49:28 all map task done. now starting reduce.
+2020/06/14 19:49:28 file: mr-*-0 dequeue
+2020/06/14 19:49:28 file: mr-*-2 dequeue
+2020/06/14 19:49:28 file: mr-*-1 dequeue
+2020/06/14 19:49:28 get task &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:49:28.175295 +0800 CST m=+6.784371448}
+2020/06/14 19:49:28 get task &{WorkerID:3 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:49:28.175536 +0800 CST m=+6.784612897}
+2020/06/14 19:49:28 get task &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:49:28.17542 +0800 CST m=+6.784496670}
+2020/06/14 19:49:28 task: &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:49:28.175295 +0800 CST}
+working on &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:49:28.175295 +0800 CST}
+2020/06/14 19:49:28 task: &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:49:28.17542 +0800 CST}
+2020/06/14 19:49:28 task: &{WorkerID:3 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:49:28.175536 +0800 CST}
+working on &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:49:28.17542 +0800 CST}
+working on &{WorkerID:3 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:49:28.175536 +0800 CST}
+Set task:9 state:2
+Set task:11 state:2
+Set task:10 state:2
+2020/06/14 19:49:28 Heartbeat: worker-3 task-11 time-2020-06-14 19:49:28.439982 +0800 CST m=+7.049054850
+2020/06/14 19:49:28 Heartbeat: worker-2 task-10 time-2020-06-14 19:49:28.440231 +0800 CST m=+7.049304151
+2020/06/14 19:49:28 Heartbeat: worker-1 task-9 time-2020-06-14 19:49:28.440908 +0800 CST m=+7.049981462
+Set task:11 state:3
+all tasks sent already
+2020/06/14 19:49:30 task: <nil>
+2020/06/14 19:49:30 no task to run, exist
+Set task:9 state:3
+all tasks sent already
+2020/06/14 19:49:30 task: <nil>
+2020/06/14 19:49:30 no task to run, exist
+Set task:10 state:3
+all tasks sent already
+2020/06/14 19:49:31 task: <nil>
+2020/06/14 19:49:31 no task to run, exist
+2020/06/14 19:49:38 all reduce task done
+--- wc test: PASS
+*** Starting indexer test.
+2020/06/14 19:49:43 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/14 19:49:43 file: ../pg-being_ernest.txt enqueue
+2020/06/14 19:49:43 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/14 19:49:44 worker-1 registerd
+2020/06/14 19:49:44 worker-2 registerd
+2020/06/14 19:49:44 file: ../pg-being_ernest.txt dequeue
+2020/06/14 19:49:44 file: ../pg-dorian_gray.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:49:44.054573 +0800 CST m=+1.034360947}
+2020/06/14 19:49:44 file: ../pg-dorian_gray.txt dequeue
+2020/06/14 19:49:44 file: ../pg-frankenstein.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:49:44.055773 +0800 CST m=+1.035561024}
+2020/06/14 19:49:44 task: &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:49:44.054573 +0800 CST}
+working on &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:49:44.054573 +0800 CST}
+2020/06/14 19:49:44 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:49:44.055773 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:49:44.055773 +0800 CST}
+Set task:1 state:2
+Set task:2 state:2
+Set task:1 state:3
+2020/06/14 19:49:44 file: ../pg-frankenstein.txt dequeue
+2020/06/14 19:49:44 file: ../pg-grimm.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:49:44.108471 +0800 CST m=+1.088257992}
+2020/06/14 19:49:44 task: &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:49:44.108471 +0800 CST}
+working on &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:49:44.108471 +0800 CST}
+Set task:3 state:2
+Set task:2 state:3
+2020/06/14 19:49:44 file: ../pg-grimm.txt dequeue
+2020/06/14 19:49:44 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:49:44.200309 +0800 CST m=+1.180094432}
+2020/06/14 19:49:44 task: &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:49:44.200309 +0800 CST}
+working on &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:49:44.200309 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+2020/06/14 19:49:44 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/14 19:49:44 file: ../pg-metamorphosis.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:49:44.24844 +0800 CST m=+1.228225398}
+2020/06/14 19:49:44 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:49:44.24844 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:49:44.24844 +0800 CST}
+Set task:5 state:2
+Set task:4 state:3
+2020/06/14 19:49:44 file: ../pg-metamorphosis.txt dequeue
+2020/06/14 19:49:44 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:49:44.395812 +0800 CST m=+1.375594660}
+2020/06/14 19:49:44 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:49:44.395812 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:49:44.395812 +0800 CST}
+Set task:6 state:2
+Set task:5 state:3
+2020/06/14 19:49:44 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/14 19:49:44 file: ../pg-tom_sawyer.txt enqueue
+2020/06/14 19:49:44 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:49:44.404975 +0800 CST m=+1.384757958}
+2020/06/14 19:49:44 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:49:44.404975 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:49:44.404975 +0800 CST}
+Set task:7 state:2
+Set task:6 state:3
+2020/06/14 19:49:44 file: ../pg-tom_sawyer.txt dequeue
+2020/06/14 19:49:44 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:49:44.443255 +0800 CST m=+1.423037236}
+2020/06/14 19:49:44 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:49:44.443255 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:49:44.443255 +0800 CST}
+Set task:8 state:2
+Set task:7 state:3
+Set task:8 state:3
+2020/06/14 19:49:47 Heartbeat: worker-1 task-7 time-2020-06-14 19:49:47.055334 +0800 CST m=+4.035078029
+2020/06/14 19:49:47 Heartbeat: worker-2 task-8 time-2020-06-14 19:49:47.055685 +0800 CST m=+4.035429277
+2020/06/14 19:49:49 all map task done. now starting reduce.
+2020/06/14 19:49:49 file: mr-*-1 dequeue
+2020/06/14 19:49:49 file: mr-*-0 dequeue
+2020/06/14 19:49:49 get task &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:49:49.44414 +0800 CST m=+6.423849438}
+2020/06/14 19:49:49 get task &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:49:49.44417 +0800 CST m=+6.423879783}
+2020/06/14 19:49:49 task: &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:49:49.44417 +0800 CST}
+working on &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:49:49.44417 +0800 CST}
+2020/06/14 19:49:49 task: &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:49:49.44414 +0800 CST}
+working on &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:49:49.44414 +0800 CST}
+Set task:10 state:2
+Set task:9 state:2
+Set task:9 state:3
+2020/06/14 19:49:49 file: mr-*-2 dequeue
+2020/06/14 19:49:49 get task &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:49:49.831655 +0800 CST m=+6.811358254}
+2020/06/14 19:49:49 task: &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:49:49.831655 +0800 CST}
+working on &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:49:49.831655 +0800 CST}
+Set task:10 state:3
+Set task:11 state:2
+all tasks sent already
+2020/06/14 19:49:49 task: <nil>
+2020/06/14 19:49:49 no task to run, exist
+2020/06/14 19:49:50 Heartbeat: worker-2 task-11 time-2020-06-14 19:49:50.063167 +0800 CST m=+7.042867107
+Set task:11 state:3
+all tasks sent already
+2020/06/14 19:49:50 task: <nil>
+2020/06/14 19:49:50 no task to run, exist
+--- indexer test: PASS
+2020/06/14 19:49:59 all reduce task done
+2020/06/14 19:50:02 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/14 19:50:02 file: ../pg-being_ernest.txt enqueue
+2020/06/14 19:50:02 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/14 19:50:03 worker-2 registerd
+2020/06/14 19:50:03 worker-1 registerd
+2020/06/14 19:50:03 file: ../pg-being_ernest.txt dequeue
+2020/06/14 19:50:03 file: ../pg-dorian_gray.txt enqueue
+2020/06/14 19:50:03 get task &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:03.496357 +0800 CST m=+1.386303979}
+2020/06/14 19:50:03 file: ../pg-dorian_gray.txt dequeue
+2020/06/14 19:50:03 file: ../pg-frankenstein.txt enqueue
+2020/06/14 19:50:03 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:03.496656 +0800 CST m=+1.386603000}
+2020/06/14 19:50:03 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:03.496656 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:03.496656 +0800 CST}
+2020/06/14 19:50:03 task: &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:03.496357 +0800 CST}
+working on &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:03.496357 +0800 CST}
+Set task:2 state:2
+Set task:1 state:2
+Set task:1 state:3
+2020/06/14 19:50:04 file: ../pg-frankenstein.txt dequeue
+2020/06/14 19:50:04 file: ../pg-grimm.txt enqueue
+2020/06/14 19:50:04 get task &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:04.518545 +0800 CST m=+2.408476909}
+Set task:2 state:3
+2020/06/14 19:50:04 task: &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:04.518545 +0800 CST}
+working on &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:04.518545 +0800 CST}
+2020/06/14 19:50:04 file: ../pg-grimm.txt dequeue
+2020/06/14 19:50:04 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/14 19:50:04 get task &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:04.521702 +0800 CST m=+2.411634708}
+Set task:3 state:2
+2020/06/14 19:50:04 task: &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:04.521702 +0800 CST}
+working on &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:04.521702 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+2020/06/14 19:50:05 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/14 19:50:05 file: ../pg-metamorphosis.txt enqueue
+2020/06/14 19:50:05 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:05.534448 +0800 CST m=+3.424365901}
+2020/06/14 19:50:05 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:05.534448 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:05.534448 +0800 CST}
+Set task:5 state:2
+Set task:4 state:3
+2020/06/14 19:50:05 file: ../pg-metamorphosis.txt dequeue
+2020/06/14 19:50:05 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/14 19:50:05 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:05.540655 +0800 CST m=+3.430572639}
+2020/06/14 19:50:05 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:05.540655 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:05.540655 +0800 CST}
+Set task:6 state:2
+2020/06/14 19:50:06 Heartbeat: worker-1 task-5 time-2020-06-14 19:50:06.50016 +0800 CST m=+4.390063396
+2020/06/14 19:50:06 Heartbeat: worker-2 task-6 time-2020-06-14 19:50:06.50072 +0800 CST m=+4.390623703
+Set task:5 state:3
+2020/06/14 19:50:06 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/14 19:50:06 file: ../pg-tom_sawyer.txt enqueue
+2020/06/14 19:50:06 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:06.550693 +0800 CST m=+4.440595524}
+2020/06/14 19:50:06 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:06.550693 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:06.550693 +0800 CST}
+Set task:6 state:3
+Set task:7 state:2
+2020/06/14 19:50:06 file: ../pg-tom_sawyer.txt dequeue
+2020/06/14 19:50:06 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:06.553992 +0800 CST m=+4.443894806}
+2020/06/14 19:50:06 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:06.553992 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:06.553992 +0800 CST}
+Set task:8 state:2
+Set task:8 state:3
+Set task:7 state:3
+2020/06/14 19:50:09 Heartbeat: worker-2 task-8 time-2020-06-14 19:50:09.506083 +0800 CST m=+7.395942367
+2020/06/14 19:50:09 Heartbeat: worker-1 task-7 time-2020-06-14 19:50:09.506651 +0800 CST m=+7.396510860
+2020/06/14 19:50:11 all map task done. now starting reduce.
+2020/06/14 19:50:11 file: mr-*-1 dequeue
+2020/06/14 19:50:11 file: mr-*-0 dequeue
+2020/06/14 19:50:11 get task &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:50:11.554423 +0800 CST m=+9.444252747}
+2020/06/14 19:50:11 get task &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:50:11.554452 +0800 CST m=+9.444281627}
+2020/06/14 19:50:11 task: &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:50:11.554452 +0800 CST}
+working on &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:50:11.554452 +0800 CST}
+2020/06/14 19:50:11 task: &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:50:11.554423 +0800 CST}
+working on &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:50:11.554423 +0800 CST}
+Set task:10 state:2
+Set task:9 state:2
+Set task:10 state:3
+Set task:9 state:3
+2020/06/14 19:50:11 file: mr-*-2 dequeue
+2020/06/14 19:50:11 get task &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:50:11.562006 +0800 CST m=+9.451835655}
+all tasks sent already
+2020/06/14 19:50:11 task: &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:50:11.562006 +0800 CST}
+working on &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:50:11.562006 +0800 CST}
+2020/06/14 19:50:11 task: <nil>
+2020/06/14 19:50:11 no task to run, exist
+Set task:11 state:2
+Set task:11 state:3
+all tasks sent already
+2020/06/14 19:50:11 task: <nil>
+2020/06/14 19:50:11 no task to run, exist
+--- map parallelism test: PASS
+2020/06/14 19:50:21 all reduce task done
+2020/06/14 19:50:24 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/14 19:50:24 file: ../pg-being_ernest.txt enqueue
+2020/06/14 19:50:24 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/14 19:50:25 worker-1 registerd
+2020/06/14 19:50:25 worker-2 registerd
+2020/06/14 19:50:25 file: ../pg-being_ernest.txt dequeue
+2020/06/14 19:50:25 file: ../pg-dorian_gray.txt enqueue
+2020/06/14 19:50:25 get task &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:25.617489 +0800 CST m=+1.420019416}
+2020/06/14 19:50:25 file: ../pg-dorian_gray.txt dequeue
+2020/06/14 19:50:25 file: ../pg-frankenstein.txt enqueue
+2020/06/14 19:50:25 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:25.618474 +0800 CST m=+1.421004946}
+2020/06/14 19:50:25 task: &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:25.617489 +0800 CST}
+working on &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:25.617489 +0800 CST}
+2020/06/14 19:50:25 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:25.618474 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:25.618474 +0800 CST}
+Set task:1 state:2
+Set task:2 state:2
+Set task:1 state:3
+Set task:2 state:3
+2020/06/14 19:50:25 file: ../pg-frankenstein.txt dequeue
+2020/06/14 19:50:25 get task &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:25.629506 +0800 CST m=+1.432037168}
+2020/06/14 19:50:25 file: ../pg-grimm.txt enqueue
+2020/06/14 19:50:25 task: &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:25.629506 +0800 CST}
+working on &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:25.629506 +0800 CST}
+2020/06/14 19:50:25 file: ../pg-grimm.txt dequeue
+2020/06/14 19:50:25 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/14 19:50:25 get task &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:25.630934 +0800 CST m=+1.433464571}
+2020/06/14 19:50:25 task: &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:25.630934 +0800 CST}
+working on &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:25.630934 +0800 CST}
+Set task:3 state:2
+Set task:4 state:2
+Set task:3 state:3
+Set task:4 state:3
+2020/06/14 19:50:25 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/14 19:50:25 file: ../pg-metamorphosis.txt enqueue
+2020/06/14 19:50:25 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:25.642097 +0800 CST m=+1.444627715}
+2020/06/14 19:50:25 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:25.642097 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:25.642097 +0800 CST}
+2020/06/14 19:50:25 file: ../pg-metamorphosis.txt dequeue
+2020/06/14 19:50:25 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/14 19:50:25 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:25.643738 +0800 CST m=+1.446269088}
+2020/06/14 19:50:25 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:25.643738 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:25.643738 +0800 CST}
+Set task:5 state:2
+Set task:6 state:2
+Set task:6 state:3
+2020/06/14 19:50:25 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/14 19:50:25 file: ../pg-tom_sawyer.txt enqueue
+2020/06/14 19:50:25 get task &{WorkerID:2 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:25.652252 +0800 CST m=+1.454782684}
+2020/06/14 19:50:25 task: &{WorkerID:2 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:25.652252 +0800 CST}
+working on &{WorkerID:2 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:25.652252 +0800 CST}
+Set task:5 state:3
+Set task:7 state:2
+2020/06/14 19:50:25 file: ../pg-tom_sawyer.txt dequeue
+2020/06/14 19:50:25 get task &{WorkerID:1 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:25.656975 +0800 CST m=+1.459505799}
+2020/06/14 19:50:25 task: &{WorkerID:1 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:25.656975 +0800 CST}
+working on &{WorkerID:1 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:25.656975 +0800 CST}
+Set task:8 state:2
+Set task:8 state:3
+Set task:7 state:3
+2020/06/14 19:50:28 Heartbeat: worker-1 task-8 time-2020-06-14 19:50:28.621395 +0800 CST m=+4.423949304
+2020/06/14 19:50:28 Heartbeat: worker-2 task-7 time-2020-06-14 19:50:28.621861 +0800 CST m=+4.424416073
+2020/06/14 19:50:30 all map task done. now starting reduce.
+2020/06/14 19:50:30 file: mr-*-0 dequeue
+2020/06/14 19:50:30 file: mr-*-1 dequeue
+2020/06/14 19:50:30 get task &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:50:30.658867 +0800 CST m=+6.461431319}
+2020/06/14 19:50:30 get task &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:50:30.658908 +0800 CST m=+6.461472151}
+2020/06/14 19:50:30 task: &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:50:30.658908 +0800 CST}
+working on &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:50:30.658908 +0800 CST}
+2020/06/14 19:50:30 task: &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:50:30.658867 +0800 CST}
+working on &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:50:30.658867 +0800 CST}
+Set task:10 state:2
+Set task:9 state:2
+2020/06/14 19:50:31 Heartbeat: worker-1 task-9 time-2020-06-14 19:50:31.625902 +0800 CST m=+7.428468443
+2020/06/14 19:50:31 Heartbeat: worker-2 task-10 time-2020-06-14 19:50:31.626307 +0800 CST m=+7.428874063
+Set task:10 state:3
+2020/06/14 19:50:31 file: mr-*-2 dequeue
+2020/06/14 19:50:31 get task &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:50:31.673486 +0800 CST m=+7.476053366}
+2020/06/14 19:50:31 task: &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:50:31.673486 +0800 CST}
+working on &{WorkerID:2 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:50:31.673486 +0800 CST}
+Set task:11 state:2
+2020/06/14 19:50:34 Heartbeat: worker-2 task-11 time-2020-06-14 19:50:34.63135 +0800 CST m=+10.433919131
+2020/06/14 19:50:34 Heartbeat: worker-1 task-9 time-2020-06-14 19:50:34.63137 +0800 CST m=+10.433939044
+==================
+WARNING: DATA RACE
+Write at 0x00c00015a7b0 by goroutine 55:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).WorkerHeartBeat()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:249 +0x271
+  runtime.call64()
+      /usr/local/go/src/runtime/asm_amd64.s:540 +0x3a
+  reflect.Value.Call()
+      /usr/local/go/src/reflect/value.go:321 +0xd3
+  net/rpc.(*service).call()
+      /usr/local/go/src/net/rpc/server.go:377 +0x22b
+
+Previous read at 0x00c00015a7b0 by goroutine 9:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).handleHeartbeat.func1()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:207 +0xb2
+  sync.(*Map).Range()
+      /usr/local/go/src/sync/map.go:333 +0x155
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).handleHeartbeat()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:229 +0x86
+
+Goroutine 55 (running) created at:
+  net/rpc.(*Server).ServeCodec()
+      /usr/local/go/src/net/rpc/server.go:474 +0x491
+  net/rpc.(*Server).ServeConn()
+      /usr/local/go/src/net/rpc/server.go:449 +0x243
+  net/rpc.(*Server).ServeHTTP()
+      /usr/local/go/src/net/rpc/server.go:704 +0x4fe
+  net/http.(*ServeMux).ServeHTTP()
+      /usr/local/go/src/net/http/server.go:2387 +0x288
+  net/http.serverHandler.ServeHTTP()
+      /usr/local/go/src/net/http/server.go:2802 +0xce
+  net/http.(*conn).serve()
+      /usr/local/go/src/net/http/server.go:1890 +0x837
+
+Goroutine 9 (running) created at:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.MakeMaster()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:197 +0x3b9
+  main.main()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/main/mrmaster.go:26 +0xaf
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c0002ae2b0 by goroutine 61:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).WorkerHeartBeat()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:249 +0x271
+  runtime.call64()
+      /usr/local/go/src/runtime/asm_amd64.s:540 +0x3a
+  reflect.Value.Call()
+      /usr/local/go/src/reflect/value.go:321 +0xd3
+  net/rpc.(*service).call()
+      /usr/local/go/src/net/rpc/server.go:377 +0x22b
+
+Previous read at 0x00c0002ae2b0 by goroutine 9:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).handleHeartbeat.func1()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:207 +0xb2
+  sync.(*Map).Range()
+      /usr/local/go/src/sync/map.go:333 +0x155
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).handleHeartbeat()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:229 +0x86
+
+Goroutine 61 (running) created at:
+  net/rpc.(*Server).ServeCodec()
+      /usr/local/go/src/net/rpc/server.go:474 +0x491
+  net/rpc.(*Server).ServeConn()
+      /usr/local/go/src/net/rpc/server.go:449 +0x243
+  net/rpc.(*Server).ServeHTTP()
+      /usr/local/go/src/net/rpc/server.go:704 +0x4fe
+  net/http.(*ServeMux).ServeHTTP()
+      /usr/local/go/src/net/http/server.go:2387 +0x288
+  net/http.serverHandler.ServeHTTP()
+      /usr/local/go/src/net/http/server.go:2802 +0xce
+  net/http.(*conn).serve()
+      /usr/local/go/src/net/http/server.go:1890 +0x837
+
+Goroutine 9 (running) created at:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.MakeMaster()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:197 +0x3b9
+  main.main()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/main/mrmaster.go:26 +0xaf
+==================
+Set task:9 state:3
+all tasks sent already
+2020/06/14 19:50:35 task: <nil>
+2020/06/14 19:50:35 no task to run, exist
+Set task:11 state:3
+all tasks sent already
+2020/06/14 19:50:35 task: <nil>
+2020/06/14 19:50:35 no task to run, exist
+--- reduce parallelism test: PASS
+2020/06/14 19:50:41 all reduce task done
+Found 2 data race(s)
+*** Starting crash test.
+2020/06/14 19:50:45 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/14 19:50:45 file: ../pg-being_ernest.txt enqueue
+2020/06/14 19:50:45 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/14 19:50:47 worker-2 registerd
+2020/06/14 19:50:47 worker-3 registerd
+2020/06/14 19:50:47 worker-4 registerd
+2020/06/14 19:50:47 worker-1 registerd
+2020/06/14 19:50:47 file: ../pg-being_ernest.txt dequeue
+2020/06/14 19:50:47 file: ../pg-dorian_gray.txt enqueue
+2020/06/14 19:50:47 get task &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:47.12283 +0800 CST m=+1.407114859}
+2020/06/14 19:50:47 file: ../pg-dorian_gray.txt dequeue
+2020/06/14 19:50:47 file: ../pg-frankenstein.txt enqueue
+2020/06/14 19:50:47 get task &{WorkerID:3 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:47.123582 +0800 CST m=+1.407867407}
+2020/06/14 19:50:47 file: ../pg-frankenstein.txt dequeue
+2020/06/14 19:50:47 file: ../pg-grimm.txt enqueue
+2020/06/14 19:50:47 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/14 19:50:47 file: ../pg-grimm.txt dequeue
+2020/06/14 19:50:47 get task &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:47.123941 +0800 CST m=+1.408226185}
+2020/06/14 19:50:47 get task &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:47.124047 +0800 CST m=+1.408332069}
+2020/06/14 19:50:47 task: &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:47.12283 +0800 CST}
+working on &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-14 19:50:47.12283 +0800 CST}
+2020/06/14 19:50:47 task: &{WorkerID:3 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:47.123582 +0800 CST}
+working on &{WorkerID:3 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-14 19:50:47.123582 +0800 CST}
+2020/06/14 19:50:47 task: &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:47.124047 +0800 CST}
+working on &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:50:47.124047 +0800 CST}
+2020/06/14 19:50:47 task: &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:47.123941 +0800 CST}
+working on &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-14 19:50:47.123941 +0800 CST}
+Set task:1 state:2
+Set task:3 state:2
+Set task:4 state:2
+Set task:2 state:2
+Set task:1 state:3
+Set task:3 state:3
+2020/06/14 19:50:47 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/14 19:50:47 file: ../pg-metamorphosis.txt enqueue
+2020/06/14 19:50:47 get task &{WorkerID:2 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:47.132371 +0800 CST m=+1.416655893}
+Set task:2 state:3
+2020/06/14 19:50:47 task: &{WorkerID:2 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:47.132371 +0800 CST}
+working on &{WorkerID:2 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-14 19:50:47.132371 +0800 CST}
+2020/06/14 19:50:47 file: ../pg-metamorphosis.txt dequeue
+2020/06/14 19:50:47 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/14 19:50:47 get task &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:47.134778 +0800 CST m=+1.419063405}
+Set task:5 state:2
+2020/06/14 19:50:47 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/14 19:50:47 file: ../pg-tom_sawyer.txt enqueue
+2020/06/14 19:50:47 get task &{WorkerID:3 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:47.13574 +0800 CST m=+1.420025194}
+2020/06/14 19:50:47 task: &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:47.134778 +0800 CST}
+working on &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:50:47.134778 +0800 CST}
+2020/06/14 19:50:47 task: &{WorkerID:3 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:47.13574 +0800 CST}
+working on &{WorkerID:3 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-14 19:50:47.13574 +0800 CST}
+Set task:6 state:2
+Set task:7 state:2
+Set task:5 state:3
+2020/06/14 19:50:47 file: ../pg-tom_sawyer.txt dequeue
+2020/06/14 19:50:47 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:47.145024 +0800 CST m=+1.429309311}
+Set task:7 state:3
+2020/06/14 19:50:47 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:47.145024 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-14 19:50:47.145024 +0800 CST}
+Set task:8 state:2
+Set task:8 state:3
+2020/06/14 19:50:48 worker-5 registerd
+2020/06/14 19:50:48 worker-6 registerd
+2020/06/14 19:50:50 Heartbeat: worker-3 task-7 time-2020-06-14 19:50:50.125017 +0800 CST m=+4.409274903
+2020/06/14 19:50:50 Heartbeat: worker-2 task-8 time-2020-06-14 19:50:50.125576 +0800 CST m=+4.409833890
+2020/06/14 19:50:51 Heartbeat: worker-5 task-0 time-2020-06-14 19:50:51.186907 +0800 CST m=+5.471154859
+2020/06/14 19:50:51 Heartbeat: worker-6 task-0 time-2020-06-14 19:50:51.197296 +0800 CST m=+5.481543733
+2020/06/14 19:50:52 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:50:53 Heartbeat: worker-3 task-7 time-2020-06-14 19:50:53.132625 +0800 CST m=+7.416853175
+2020/06/14 19:50:53 Heartbeat: worker-2 task-8 time-2020-06-14 19:50:53.133056 +0800 CST m=+7.417284482
+2020/06/14 19:50:53 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:50:54 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:50:54 Heartbeat: worker-5 task-0 time-2020-06-14 19:50:54.194248 +0800 CST m=+8.478465042
+2020/06/14 19:50:54 Heartbeat: worker-6 task-0 time-2020-06-14 19:50:54.203413 +0800 CST m=+8.487629703
+2020/06/14 19:50:55 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:50:47.127167 +0800 CST m=+1.411452598} running
+2020/06/14 19:50:56 Heartbeat: worker-3 task-7 time-2020-06-14 19:50:56.136328 +0800 CST m=+10.420524240
+==================
+WARNING: DATA RACE
+Write at 0x00c000162580 by goroutine 64:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).WorkerHeartBeat()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:249 +0x271
+  runtime.call64()
+      /usr/local/go/src/runtime/asm_amd64.s:540 +0x3a
+  reflect.Value.Call()
+      /usr/local/go/src/reflect/value.go:321 +0xd3
+  net/rpc.(*service).call()
+      /usr/local/go/src/net/rpc/server.go:377 +0x22b
+
+Previous read at 0x00c000162580 by goroutine 9:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).handleHeartbeat.func1()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:207 +0xb2
+  sync.(*Map).Range()
+      /usr/local/go/src/sync/map.go:333 +0x155
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.(*Master).handleHeartbeat()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:229 +0x86
+
+Goroutine 64 (running) created at:
+  net/rpc.(*Server).ServeCodec()
+      /usr/local/go/src/net/rpc/server.go:474 +0x491
+  net/rpc.(*Server).ServeConn()
+      /usr/local/go/src/net/rpc/server.go:449 +0x243
+  net/rpc.(*Server).ServeHTTP()
+      /usr/local/go/src/net/rpc/server.go:704 +0x4fe
+  net/http.(*ServeMux).ServeHTTP()
+      /usr/local/go/src/net/http/server.go:2387 +0x288
+  net/http.serverHandler.ServeHTTP()
+      /usr/local/go/src/net/http/server.go:2802 +0xce
+  net/http.(*conn).serve()
+      /usr/local/go/src/net/http/server.go:1890 +0x837
+
+Goroutine 9 (running) created at:
+  _/Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr.MakeMaster()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/mr/master.go:197 +0x3b9
+  main.main()
+      /Users/lzd/Dropbox/go/src/v9.git.n.xiaomi.com/dba/test/gogogo/15.distribute_6.824_2020/lab1_mapreduce/main/mrmaster.go:26 +0xaf
+==================
+2020/06/14 19:50:56 Heartbeat: worker-2 task-8 time-2020-06-14 19:50:56.139814 +0800 CST m=+10.424010201
+2020/06/14 19:50:56 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:50:57 rpc: Master.GetTask(&{3 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:50:57 worker:3 get task fail,exit
+2020/06/14 19:50:57 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:50:47.127167 +0800 CST m=+1.411452598} running
+2020/06/14 19:50:57 rpc: Master.GetTask(&{2 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:50:57 worker:2 get task fail,exit
+2020/06/14 19:50:57 Heartbeat: worker-5 task-0 time-2020-06-14 19:50:57.203427 +0800 CST m=+11.487611467
+2020/06/14 19:50:57 Heartbeat: worker-6 task-0 time-2020-06-14 19:50:57.210019 +0800 CST m=+11.494202836
+2020/06/14 19:50:58 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:50:47.127167 +0800 CST m=+1.411452598} running
+2020/06/14 19:50:58 rpc: Master.GetTask(&{5 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:50:58 worker:5 get task fail,exit
+2020/06/14 19:50:58 rpc: Master.GetTask(&{6 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:50:58 worker:6 get task fail,exit
+2020/06/14 19:50:58 worker-7 registerd
+2020/06/14 19:50:59 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:50:59 worker-8 registerd
+2020/06/14 19:50:59 worker-9 registerd
+2020/06/14 19:51:00 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:51:01 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:51:01 Heartbeat: worker-7 task-0 time-2020-06-14 19:51:01.216182 +0800 CST m=+15.500319168
+2020/06/14 19:51:02 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:51:02 Heartbeat: worker-8 task-0 time-2020-06-14 19:51:02.242499 +0800 CST m=+16.526624007
+2020/06/14 19:51:02 Heartbeat: worker-9 task-0 time-2020-06-14 19:51:02.244719 +0800 CST m=+16.528843063
+2020/06/14 19:51:03 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:51:04 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:51:04 Heartbeat: worker-7 task-0 time-2020-06-14 19:51:04.22399 +0800 CST m=+18.508089888
+2020/06/14 19:51:05 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:50:47.137565 +0800 CST m=+1.421850427} running
+2020/06/14 19:51:05 Heartbeat: worker-8 task-0 time-2020-06-14 19:51:05.248683 +0800 CST m=+19.532770416
+2020/06/14 19:51:05 Heartbeat: worker-9 task-0 time-2020-06-14 19:51:05.252968 +0800 CST m=+19.537054513
+Set task:6 state:4
+Set task:4 state:4
+2020/06/14 19:51:06 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:05.723142 +0800 CST m=+20.007223318} running
+2020/06/14 19:51:07 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:05.723106 +0800 CST m=+20.007187495} running
+2020/06/14 19:51:07 Heartbeat: worker-7 task-0 time-2020-06-14 19:51:07.230891 +0800 CST m=+21.514952645
+2020/06/14 19:51:08 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:05.723106 +0800 CST m=+20.007187495} running
+2020/06/14 19:51:08 rpc: Master.GetTask(&{7 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:08 worker:7 get task fail,exit
+2020/06/14 19:51:08 Heartbeat: worker-8 task-0 time-2020-06-14 19:51:08.258095 +0800 CST m=+22.542143751
+2020/06/14 19:51:08 Heartbeat: worker-9 task-0 time-2020-06-14 19:51:08.258552 +0800 CST m=+22.542600170
+2020/06/14 19:51:09 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:05.723106 +0800 CST m=+20.007187495} running
+2020/06/14 19:51:09 rpc: Master.GetTask(&{8 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:09 worker:8 get task fail,exit
+2020/06/14 19:51:09 rpc: Master.GetTask(&{9 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:09 worker:9 get task fail,exit
+2020/06/14 19:51:09 worker-10 registerd
+2020/06/14 19:51:09 task:&{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:05.723106 +0800 CST m=+20.007187495} retry
+2020/06/14 19:51:09 task: &{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:51:09.262523 +0800 CST}
+working on &{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:51:09.262523 +0800 CST}
+Set task:6 state:2
+2020/06/14 19:51:10 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:05.723142 +0800 CST m=+20.007223318} running
+2020/06/14 19:51:10 worker-1 registerd
+2020/06/14 19:51:10 worker-4 registerd
+2020/06/14 19:51:10 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:05.723142 +0800 CST m=+20.007223318} retry
+2020/06/14 19:51:10 task: &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:51:10.300439 +0800 CST}
+working on &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:51:10.300439 +0800 CST}
+Set task:4 state:2
+2020/06/14 19:51:10 worker-2 registerd
+2020/06/14 19:51:11 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:11 worker-3 registerd
+2020/06/14 19:51:12 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:13 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:13 Heartbeat: worker-1 task-0 time-2020-06-14 19:51:13.305729 +0800 CST m=+27.589710777
+2020/06/14 19:51:13 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:13.321087 +0800 CST m=+27.605068587
+2020/06/14 19:51:14 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:14 Heartbeat: worker-3 task-0 time-2020-06-14 19:51:14.360496 +0800 CST m=+28.644463242
+2020/06/14 19:51:15 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:16 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:16 Heartbeat: worker-1 task-0 time-2020-06-14 19:51:16.313148 +0800 CST m=+30.597088524
+2020/06/14 19:51:16 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:16.326541 +0800 CST m=+30.610481444
+2020/06/14 19:51:17 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:17 Heartbeat: worker-3 task-0 time-2020-06-14 19:51:17.365138 +0800 CST m=+31.649064408
+2020/06/14 19:51:18 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:19 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:19 Heartbeat: worker-1 task-0 time-2020-06-14 19:51:19.319222 +0800 CST m=+33.603121617
+2020/06/14 19:51:19 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:19.332755 +0800 CST m=+33.616654258
+2020/06/14 19:51:20 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:20 rpc: Master.GetTask(&{1 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:20 worker:1 get task fail,exit
+2020/06/14 19:51:20 rpc: Master.GetTask(&{2 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:20 worker:2 get task fail,exit
+2020/06/14 19:51:20 Heartbeat: worker-3 task-0 time-2020-06-14 19:51:20.370569 +0800 CST m=+34.654454426
+2020/06/14 19:51:21 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:21 worker-2 registerd
+2020/06/14 19:51:21 rpc: Master.GetTask(&{3 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:21 worker:3 get task fail,exit
+2020/06/14 19:51:21 worker-3 registerd
+2020/06/14 19:51:22 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:22 worker-1 registerd
+2020/06/14 19:51:23 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:24 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-14 19:51:10.303498 +0800 CST m=+24.587520062} running
+2020/06/14 19:51:24 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:24.360147 +0800 CST m=+38.643976243
+2020/06/14 19:51:24 Heartbeat: worker-3 task-0 time-2020-06-14 19:51:24.37787 +0800 CST m=+38.661699085
+2020/06/14 19:51:25 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:09.264654 +0800 CST m=+23.548689313} running
+2020/06/14 19:51:25 Heartbeat: worker-1 task-0 time-2020-06-14 19:51:25.412833 +0800 CST m=+39.696647562
+Set task:6 state:4
+Set task:4 state:4
+2020/06/14 19:51:26 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:25.725786 +0800 CST m=+40.009595930} running
+2020/06/14 19:51:27 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:25.725786 +0800 CST m=+40.009595930} running
+2020/06/14 19:51:27 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:27.365257 +0800 CST m=+41.649044205
+2020/06/14 19:51:27 Heartbeat: worker-3 task-0 time-2020-06-14 19:51:27.381181 +0800 CST m=+41.664967843
+2020/06/14 19:51:28 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:25.7257 +0800 CST m=+40.009509822} running
+2020/06/14 19:51:28 Heartbeat: worker-1 task-0 time-2020-06-14 19:51:28.419047 +0800 CST m=+42.702819243
+2020/06/14 19:51:29 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:25.725786 +0800 CST m=+40.009595930} running
+2020/06/14 19:51:30 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:25.725786 +0800 CST m=+40.009595930} running
+2020/06/14 19:51:30 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:30.37115 +0800 CST m=+44.654894054
+2020/06/14 19:51:30 Heartbeat: worker-3 task-0 time-2020-06-14 19:51:30.387246 +0800 CST m=+44.670990436
+2020/06/14 19:51:31 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:25.7257 +0800 CST m=+40.009509822} running
+2020/06/14 19:51:31 rpc: Master.GetTask(&{2 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:31 worker:2 get task fail,exit
+2020/06/14 19:51:31 rpc: Master.GetTask(&{3 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:31 worker:3 get task fail,exit
+2020/06/14 19:51:31 Heartbeat: worker-1 task-0 time-2020-06-14 19:51:31.42271 +0800 CST m=+45.706439593
+2020/06/14 19:51:32 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:25.725786 +0800 CST m=+40.009595930} running
+2020/06/14 19:51:32 worker-3 registerd
+2020/06/14 19:51:32 task:&{WorkerID:10 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:25.7257 +0800 CST m=+40.009509822} retry
+2020/06/14 19:51:32 task: &{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:51:32.408562 +0800 CST}
+working on &{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:51:32.408562 +0800 CST}
+Set task:6 state:2
+2020/06/14 19:51:32 rpc: Master.GetTask(&{1 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:32 worker:1 get task fail,exit
+2020/06/14 19:51:32 worker-1 registerd
+2020/06/14 19:51:32 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-14 19:51:25.725786 +0800 CST m=+40.009595930} retry
+2020/06/14 19:51:32 task: &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:51:32.426764 +0800 CST}
+working on &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-14 19:51:32.426764 +0800 CST}
+Set task:4 state:2
+2020/06/14 19:51:33 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:33 worker-10 registerd
+2020/06/14 19:51:33 worker-2 registerd
+2020/06/14 19:51:34 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:35 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:35 Heartbeat: worker-1 task-4 time-2020-06-14 19:51:35.43171 +0800 CST m=+49.715382373
+2020/06/14 19:51:36 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:36 Heartbeat: worker-10 task-0 time-2020-06-14 19:51:36.470249 +0800 CST m=+50.753906229
+2020/06/14 19:51:36 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:36.470703 +0800 CST m=+50.754360784
+2020/06/14 19:51:37 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+Set task:4 state:3
+2020/06/14 19:51:38 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:38 Heartbeat: worker-1 task-4 time-2020-06-14 19:51:38.435366 +0800 CST m=+52.718994713
+2020/06/14 19:51:39 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:39 Heartbeat: worker-10 task-0 time-2020-06-14 19:51:39.474534 +0800 CST m=+53.758148457
+2020/06/14 19:51:39 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:39.474942 +0800 CST m=+53.758556235
+2020/06/14 19:51:40 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:41 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:41 Heartbeat: worker-1 task-4 time-2020-06-14 19:51:41.443147 +0800 CST m=+55.726732422
+2020/06/14 19:51:42 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:42 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:42.481312 +0800 CST m=+56.764883180
+2020/06/14 19:51:42 Heartbeat: worker-10 task-0 time-2020-06-14 19:51:42.48168 +0800 CST m=+56.765250732
+2020/06/14 19:51:43 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:43 rpc: Master.GetTask(&{10 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:43 rpc: Master.GetTask(&{2 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:43 worker:2 get task fail,exit
+2020/06/14 19:51:43 worker:10 get task fail,exit
+2020/06/14 19:51:44 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+2020/06/14 19:51:44 Heartbeat: worker-1 task-4 time-2020-06-14 19:51:44.4483 +0800 CST m=+58.731842363
+2020/06/14 19:51:44 worker-4 registerd
+2020/06/14 19:51:44 worker-2 registerd
+2020/06/14 19:51:45 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:2 BeatTime:2020-06-14 19:51:32.410887 +0800 CST m=+46.694602497} running
+Set task:6 state:4
+2020/06/14 19:51:46 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:45.734271 +0800 CST m=+60.017794481} running
+2020/06/14 19:51:47 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:45.734271 +0800 CST m=+60.017794481} running
+2020/06/14 19:51:47 Heartbeat: worker-1 task-4 time-2020-06-14 19:51:47.452238 +0800 CST m=+61.735736693
+2020/06/14 19:51:47 Heartbeat: worker-2 task-0 time-2020-06-14 19:51:47.531821 +0800 CST m=+61.815319083
+2020/06/14 19:51:47 Heartbeat: worker-4 task-0 time-2020-06-14 19:51:47.532146 +0800 CST m=+61.815643610
+2020/06/14 19:51:47 rpc: Master.GetTask(&{1 0}) timeout: /var/tmp/824-mr-501
+2020/06/14 19:51:47 worker:1 get task fail,exit
+2020/06/14 19:51:48 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:45.734271 +0800 CST m=+60.017794481} running
+2020/06/14 19:51:48 worker-3 registerd
+2020/06/14 19:51:48 task:&{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:4 BeatTime:2020-06-14 19:51:45.734271 +0800 CST m=+60.017794481} retry
+2020/06/14 19:51:48 task: &{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:51:48.584552 +0800 CST}
+working on &{WorkerID:3 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-14 19:51:48.584552 +0800 CST}
+Set task:6 state:2
+Set task:6 state:3
+2020/06/14 19:51:49 all map task done. now starting reduce.
+2020/06/14 19:51:49 file: mr-*-0 dequeue
+all tasks sent already
+2020/06/14 19:51:49 file: mr-*-1 dequeue
+2020/06/14 19:51:49 file: mr-*-2 dequeue
+all tasks sent already
+2020/06/14 19:51:49 get task &{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:51:49.293889 +0800 CST m=+63.577361502}
+all tasks sent already
+2020/06/14 19:51:49 get task &{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:51:49.293185 +0800 CST m=+63.576657531}
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:49 get task &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:51:49.293325 +0800 CST m=+63.576797696}
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:49 task: <nil>
+2020/06/14 19:51:49 task: <nil>
+2020/06/14 19:51:49 no task to run, exist
+all tasks sent already
+2020/06/14 19:51:49 no task to run, exist
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:49 task: <nil>
+2020/06/14 19:51:49 no task to run, exist
+2020/06/14 19:51:51 worker-1 registerd
+2020/06/14 19:51:51 worker-2 registerd
+2020/06/14 19:51:51 worker-3 registerd
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:51 task: <nil>
+2020/06/14 19:51:51 no task to run, exist
+2020/06/14 19:51:51 task: <nil>
+2020/06/14 19:51:51 no task to run, exist
+2020/06/14 19:51:51 task: <nil>
+2020/06/14 19:51:51 no task to run, exist
+2020/06/14 19:51:53 worker-4 registerd
+2020/06/14 19:51:53 worker-2 registerd
+2020/06/14 19:51:53 worker-1 registerd
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:53 task: <nil>
+2020/06/14 19:51:53 no task to run, exist
+2020/06/14 19:51:53 task: <nil>
+2020/06/14 19:51:53 no task to run, exist
+2020/06/14 19:51:53 task: <nil>
+2020/06/14 19:51:53 no task to run, exist
+2020/06/14 19:51:55 worker-4 registerd
+2020/06/14 19:51:55 worker-3 registerd
+2020/06/14 19:51:55 worker-1 registerd
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:55 task: <nil>
+2020/06/14 19:51:55 no task to run, exist
+2020/06/14 19:51:55 task: <nil>
+2020/06/14 19:51:55 no task to run, exist
+2020/06/14 19:51:55 task: <nil>
+2020/06/14 19:51:55 no task to run, exist
+2020/06/14 19:51:57 worker-2 registerd
+2020/06/14 19:51:57 worker-1 registerd
+2020/06/14 19:51:57 worker-3 registerd
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:57 task: <nil>
+2020/06/14 19:51:57 no task to run, exist
+all tasks sent already
+2020/06/14 19:51:57 task: <nil>
+2020/06/14 19:51:57 no task to run, exist
+2020/06/14 19:51:57 task: <nil>
+2020/06/14 19:51:57 no task to run, exist
+2020/06/14 19:51:59 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:51:49.293185 +0800 CST m=+63.576657531} running
+2020/06/14 19:51:59 worker-4 registerd
+2020/06/14 19:51:59 worker-3 registerd
+all tasks sent already
+2020/06/14 19:51:59 worker-2 registerd
+2020/06/14 19:51:59 task: <nil>
+2020/06/14 19:51:59 no task to run, exist
+all tasks sent already
+all tasks sent already
+2020/06/14 19:51:59 task: <nil>
+2020/06/14 19:51:59 task: <nil>
+2020/06/14 19:51:59 no task to run, exist
+2020/06/14 19:51:59 no task to run, exist
+2020/06/14 19:52:01 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:51:49.293185 +0800 CST m=+63.576657531} running
+2020/06/14 19:52:01 worker-1 registerd
+2020/06/14 19:52:01 worker-3 registerd
+2020/06/14 19:52:01 worker-4 registerd
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:52:01 task: <nil>
+2020/06/14 19:52:01 no task to run, exist
+2020/06/14 19:52:01 task: <nil>
+2020/06/14 19:52:01 no task to run, exist
+2020/06/14 19:52:01 task: <nil>
+2020/06/14 19:52:01 no task to run, exist
+2020/06/14 19:52:03 task:&{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:51:49.293889 +0800 CST m=+63.577361502} running
+2020/06/14 19:52:03 worker-2 registerd
+2020/06/14 19:52:03 worker-3 registerd
+2020/06/14 19:52:03 worker-4 registerd
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/14 19:52:03 task: <nil>
+2020/06/14 19:52:03 no task to run, exist
+2020/06/14 19:52:03 task: <nil>
+2020/06/14 19:52:03 no task to run, exist
+2020/06/14 19:52:03 task: <nil>
+2020/06/14 19:52:03 no task to run, exist
+2020/06/14 19:52:05 task:&{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:51:49.293889 +0800 CST m=+63.577361502} running
+Set task:9 state:4
+Set task:10 state:4
+Set task:11 state:4
+2020/06/14 19:52:05 worker-1 registerd
+2020/06/14 19:52:05 task:&{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:4 BeatTime:2020-06-14 19:52:05.740709 +0800 CST m=+80.023942935} retry
+2020/06/14 19:52:05 task: &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:52:05.772391 +0800 CST}
+working on &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-14 19:52:05.772391 +0800 CST}
+Set task:11 state:2
+2020/06/14 19:52:05 worker-2 registerd
+2020/06/14 19:52:05 worker-3 registerd
+2020/06/14 19:52:05 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:4 BeatTime:2020-06-14 19:52:05.740651 +0800 CST m=+80.023884881} retry
+2020/06/14 19:52:05 task:&{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:4 BeatTime:2020-06-14 19:52:05.740682 +0800 CST m=+80.023915425} retry
+2020/06/14 19:52:05 task: &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:52:05.780782 +0800 CST}
+working on &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:52:05.780782 +0800 CST}
+2020/06/14 19:52:05 task: &{WorkerID:3 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:52:05.781636 +0800 CST}
+working on &{WorkerID:3 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-14 19:52:05.781636 +0800 CST}
+Set task:9 state:2
+Set task:10 state:2
+Set task:10 state:3
+all tasks sent already
+2020/06/14 19:52:05 task: <nil>
+2020/06/14 19:52:05 no task to run, exist
+2020/06/14 19:52:06 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:06 task: <nil>
+2020/06/14 19:52:06 no task to run, exist
+2020/06/14 19:52:07 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:07 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:07 task: <nil>
+2020/06/14 19:52:07 no task to run, exist
+2020/06/14 19:52:08 Heartbeat: worker-1 task-11 time-2020-06-14 19:52:08.774054 +0800 CST m=+83.057243332
+2020/06/14 19:52:08 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:08 task: <nil>
+2020/06/14 19:52:08 no task to run, exist
+2020/06/14 19:52:09 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:09 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:09 task: <nil>
+2020/06/14 19:52:09 no task to run, exist
+2020/06/14 19:52:10 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:10 task: <nil>
+2020/06/14 19:52:10 no task to run, exist
+2020/06/14 19:52:11 task:&{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-14 19:52:08.774054 +0800 CST m=+83.057243332} running
+2020/06/14 19:52:11 Heartbeat: worker-1 task-11 time-2020-06-14 19:52:11.783307 +0800 CST m=+86.066453048
+2020/06/14 19:52:11 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:11 task: <nil>
+2020/06/14 19:52:11 no task to run, exist
+2020/06/14 19:52:13 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:13 task: <nil>
+2020/06/14 19:52:13 no task to run, exist
+2020/06/14 19:52:13 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+Set task:11 state:3
+all tasks sent already
+2020/06/14 19:52:13 task: <nil>
+2020/06/14 19:52:13 no task to run, exist
+2020/06/14 19:52:14 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:14 task: <nil>
+2020/06/14 19:52:14 no task to run, exist
+2020/06/14 19:52:15 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:15 task: <nil>
+2020/06/14 19:52:15 no task to run, exist
+2020/06/14 19:52:15 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:15 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:15 task: <nil>
+2020/06/14 19:52:15 no task to run, exist
+2020/06/14 19:52:16 worker-1 registerd
+all tasks sent already
+2020/06/14 19:52:16 task: <nil>
+2020/06/14 19:52:16 no task to run, exist
+2020/06/14 19:52:17 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:17 task: <nil>
+2020/06/14 19:52:17 no task to run, exist
+2020/06/14 19:52:17 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:17 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:17 task: <nil>
+2020/06/14 19:52:17 no task to run, exist
+2020/06/14 19:52:18 worker-2 registerd
+all tasks sent already
+2020/06/14 19:52:18 task: <nil>
+2020/06/14 19:52:18 no task to run, exist
+2020/06/14 19:52:19 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:19 task: <nil>
+2020/06/14 19:52:19 no task to run, exist
+2020/06/14 19:52:19 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:19 worker-1 registerd
+all tasks sent already
+2020/06/14 19:52:19 task: <nil>
+2020/06/14 19:52:19 no task to run, exist
+2020/06/14 19:52:20 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:20 task: <nil>
+2020/06/14 19:52:20 no task to run, exist
+2020/06/14 19:52:21 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:21 task: <nil>
+2020/06/14 19:52:21 no task to run, exist
+2020/06/14 19:52:21 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:21 worker-2 registerd
+all tasks sent already
+2020/06/14 19:52:21 task: <nil>
+2020/06/14 19:52:21 no task to run, exist
+2020/06/14 19:52:22 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:22 task: <nil>
+2020/06/14 19:52:22 no task to run, exist
+2020/06/14 19:52:23 worker-1 registerd
+all tasks sent already
+2020/06/14 19:52:23 task: <nil>
+2020/06/14 19:52:23 no task to run, exist
+2020/06/14 19:52:23 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+2020/06/14 19:52:23 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:23 task: <nil>
+2020/06/14 19:52:23 no task to run, exist
+2020/06/14 19:52:24 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:24 task: <nil>
+2020/06/14 19:52:24 no task to run, exist
+2020/06/14 19:52:25 worker-2 registerd
+all tasks sent already
+2020/06/14 19:52:25 task: <nil>
+2020/06/14 19:52:25 no task to run, exist
+2020/06/14 19:52:25 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-14 19:52:05.78352 +0800 CST m=+80.066753075} running
+Set task:9 state:4
+2020/06/14 19:52:26 worker-4 registerd
+2020/06/14 19:52:26 task:&{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:4 BeatTime:2020-06-14 19:52:25.747089 +0800 CST m=+100.030031103} retry
+2020/06/14 19:52:26 task: &{WorkerID:4 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:52:26.043019 +0800 CST}
+working on &{WorkerID:4 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-14 19:52:26.043019 +0800 CST}
+Set task:9 state:2
+Set task:9 state:3
+all tasks sent already
+2020/06/14 19:52:26 task: <nil>
+2020/06/14 19:52:26 no task to run, exist
+2020/06/14 19:52:26 worker-1 registerd
+all tasks sent already
+2020/06/14 19:52:26 task: <nil>
+2020/06/14 19:52:26 no task to run, exist
+2020/06/14 19:52:27 all reduce task done
+2020/06/14 19:52:27 worker-5 registerd
+all tasks sent already
+2020/06/14 19:52:27 task: <nil>
+2020/06/14 19:52:27 no task to run, exist
+2020/06/14 19:52:28 worker-3 registerd
+all tasks sent already
+2020/06/14 19:52:28 task: <nil>
+2020/06/14 19:52:28 no task to run, exist
+2020/06/14 19:52:28 worker-2 registerd
+all tasks sent already
+2020/06/14 19:52:28 task: <nil>
+2020/06/14 19:52:28 no task to run, exist
+2020/06/14 19:52:29 worker-4 registerd
+all tasks sent already
+2020/06/14 19:52:29 task: <nil>
+2020/06/14 19:52:29 no task to run, exist
+Found 1 data race(s)
+--- crash test: PASS
+*** PASSED ALL TESTS

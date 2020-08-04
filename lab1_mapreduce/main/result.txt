@@ -1,0 +1,1697 @@
+*** Starting wc test.
+2020/06/12 18:14:29 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/12 18:14:29 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/12 18:14:29 file: ../pg-being_ernest.txt enqueue
+2020/06/12 18:14:30 worker-2 registerd
+2020/06/12 18:14:30 worker-1 registerd
+2020/06/12 18:14:30 file: ../pg-being_ernest.txt dequeue
+2020/06/12 18:14:30 worker-3 registerd
+2020/06/12 18:14:30 file: ../pg-dorian_gray.txt enqueue
+2020/06/12 18:14:30 get task &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:14:30.563165 +0800 CST m=+1.048898763}
+2020/06/12 18:14:30 file: ../pg-dorian_gray.txt dequeue
+2020/06/12 18:14:30 file: ../pg-frankenstein.txt enqueue
+2020/06/12 18:14:30 get task &{WorkerID:1 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:14:30.563349 +0800 CST m=+1.049082424}
+2020/06/12 18:14:30 task: &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:14:30.563165 +0800 CST}
+working on &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:14:30.563165 +0800 CST}
+2020/06/12 18:14:30 task: &{WorkerID:1 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:14:30.563349 +0800 CST}
+working on &{WorkerID:1 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:14:30.563349 +0800 CST}
+2020/06/12 18:14:30 file: ../pg-frankenstein.txt dequeue
+2020/06/12 18:14:30 get task &{WorkerID:3 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:14:30.56379 +0800 CST m=+1.049524320}
+2020/06/12 18:14:30 file: ../pg-grimm.txt enqueue
+2020/06/12 18:14:30 task: &{WorkerID:3 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:14:30.56379 +0800 CST}
+working on &{WorkerID:3 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:14:30.56379 +0800 CST}
+Set task:2 state:2
+Set task:1 state:2
+Set task:3 state:2
+Set task:1 state:3
+2020/06/12 18:14:30 file: ../pg-grimm.txt dequeue
+2020/06/12 18:14:30 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/12 18:14:30 get task &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:14:30.589972 +0800 CST m=+1.075705241}
+2020/06/12 18:14:30 task: &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:14:30.589972 +0800 CST}
+working on &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:14:30.589972 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+2020/06/12 18:14:30 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/12 18:14:30 file: ../pg-metamorphosis.txt enqueue
+2020/06/12 18:14:30 get task &{WorkerID:3 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:14:30.645531 +0800 CST m=+1.131263230}
+2020/06/12 18:14:30 task: &{WorkerID:3 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:14:30.645531 +0800 CST}
+working on &{WorkerID:3 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:14:30.645531 +0800 CST}
+Set task:5 state:2
+Set task:2 state:3
+2020/06/12 18:14:30 file: ../pg-metamorphosis.txt dequeue
+2020/06/12 18:14:30 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/12 18:14:30 get task &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:14:30.647945 +0800 CST m=+1.133677992}
+2020/06/12 18:14:30 task: &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:14:30.647945 +0800 CST}
+working on &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:14:30.647945 +0800 CST}
+Set task:6 state:2
+Set task:6 state:3
+2020/06/12 18:14:30 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/12 18:14:30 file: ../pg-tom_sawyer.txt enqueue
+2020/06/12 18:14:30 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:14:30.669882 +0800 CST m=+1.155614773}
+2020/06/12 18:14:30 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:14:30.669882 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:14:30.669882 +0800 CST}
+Set task:7 state:2
+Set task:4 state:3
+2020/06/12 18:14:30 file: ../pg-tom_sawyer.txt dequeue
+2020/06/12 18:14:30 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:14:30.688703 +0800 CST m=+1.174435272}
+2020/06/12 18:14:30 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:14:30.688703 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:14:30.688703 +0800 CST}
+Set task:8 state:2
+Set task:5 state:3
+Set task:8 state:3
+Set task:7 state:3
+2020/06/12 18:14:33 Heartbeat: worker-1 task-7 time-2020-06-12 18:14:33.568983 +0800 CST m=+4.054672656
+2020/06/12 18:14:33 Heartbeat: worker-2 task-8 time-2020-06-12 18:14:33.569252 +0800 CST m=+4.054941397
+2020/06/12 18:14:33 Heartbeat: worker-3 task-5 time-2020-06-12 18:14:33.56972 +0800 CST m=+4.055409683
+2020/06/12 18:14:35 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc00012c210 2:0xc00012c298 3:0xc00012c3c0 4:0xc0001704a8 5:0xc000170818 6:0xc000248590 7:0xc000170828 8:0xc000170958] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:14:35 all map task done. now starting reduce.
+2020/06/12 18:14:35 file: mr-*-1 dequeue
+2020/06/12 18:14:35 file: mr-*-2 dequeue
+2020/06/12 18:14:35 file: mr-*-0 dequeue
+2020/06/12 18:14:35 get task &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:14:35.692325 +0800 CST m=+6.177983003}
+2020/06/12 18:14:35 get task &{WorkerID:3 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:14:35.692356 +0800 CST m=+6.178014392}
+2020/06/12 18:14:35 get task &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:14:35.692302 +0800 CST m=+6.177960149}
+2020/06/12 18:14:35 task: &{WorkerID:3 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:14:35.692356 +0800 CST}
+2020/06/12 18:14:35 task: &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:14:35.692302 +0800 CST}
+working on &{WorkerID:3 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:14:35.692356 +0800 CST}
+working on &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:14:35.692302 +0800 CST}
+2020/06/12 18:14:35 task: &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:14:35.692325 +0800 CST}
+working on &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:14:35.692325 +0800 CST}
+Set task:9 state:2
+Set task:11 state:2
+Set task:10 state:2
+Set task:9 state:3
+Set task:11 state:3
+all tasks sent already
+all tasks sent already
+2020/06/12 18:14:35 task: <nil>
+2020/06/12 18:14:35 no task to run, exist
+2020/06/12 18:14:35 task: <nil>
+2020/06/12 18:14:35 no task to run, exist
+Set task:10 state:3
+all tasks sent already
+2020/06/12 18:14:35 task: <nil>
+2020/06/12 18:14:35 no task to run, exist
+2020/06/12 18:14:45 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc00012c210 2:0xc00012c298 3:0xc00012c3c0 4:0xc0001704a8 5:0xc000170818 6:0xc000248590 7:0xc000170828 8:0xc000170958 9:0xc000248a30 10:0xc00012cb10 11:0xc000170f10] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:14:45 all reduce task done
+--- wc test: PASS
+*** Starting indexer test.
+2020/06/12 18:14:48 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/12 18:14:48 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/12 18:14:48 file: ../pg-being_ernest.txt enqueue
+2020/06/12 18:14:49 worker-2 registerd
+2020/06/12 18:14:49 worker-1 registerd
+2020/06/12 18:14:49 file: ../pg-being_ernest.txt dequeue
+2020/06/12 18:14:49 file: ../pg-dorian_gray.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:14:49.405297 +0800 CST m=+1.026846203}
+2020/06/12 18:14:49 file: ../pg-dorian_gray.txt dequeue
+2020/06/12 18:14:49 file: ../pg-frankenstein.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:1 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:14:49.405438 +0800 CST m=+1.026987170}
+2020/06/12 18:14:49 task: &{WorkerID:1 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:14:49.405438 +0800 CST}
+working on &{WorkerID:1 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:14:49.405438 +0800 CST}
+2020/06/12 18:14:49 task: &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:14:49.405297 +0800 CST}
+working on &{WorkerID:2 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:14:49.405297 +0800 CST}
+Set task:2 state:2
+Set task:1 state:2
+Set task:1 state:3
+2020/06/12 18:14:49 file: ../pg-frankenstein.txt dequeue
+2020/06/12 18:14:49 file: ../pg-grimm.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:2 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:14:49.4184 +0800 CST m=+1.039949350}
+2020/06/12 18:14:49 task: &{WorkerID:2 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:14:49.4184 +0800 CST}
+working on &{WorkerID:2 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:14:49.4184 +0800 CST}
+Set task:3 state:2
+Set task:2 state:3
+2020/06/12 18:14:49 file: ../pg-grimm.txt dequeue
+2020/06/12 18:14:49 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:14:49.432016 +0800 CST m=+1.053565172}
+2020/06/12 18:14:49 task: &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:14:49.432016 +0800 CST}
+working on &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:14:49.432016 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+2020/06/12 18:14:49 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/12 18:14:49 file: ../pg-metamorphosis.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:2 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:14:49.442057 +0800 CST m=+1.063605965}
+2020/06/12 18:14:49 task: &{WorkerID:2 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:14:49.442057 +0800 CST}
+working on &{WorkerID:2 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:14:49.442057 +0800 CST}
+Set task:5 state:2
+Set task:4 state:3
+2020/06/12 18:14:49 file: ../pg-metamorphosis.txt dequeue
+2020/06/12 18:14:49 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:14:49.456456 +0800 CST m=+1.078005163}
+2020/06/12 18:14:49 task: &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:14:49.456456 +0800 CST}
+working on &{WorkerID:1 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:14:49.456456 +0800 CST}
+Set task:6 state:2
+Set task:6 state:3
+2020/06/12 18:14:49 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/12 18:14:49 file: ../pg-tom_sawyer.txt enqueue
+2020/06/12 18:14:49 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:14:49.465789 +0800 CST m=+1.087337267}
+2020/06/12 18:14:49 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:14:49.465789 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:14:49.465789 +0800 CST}
+Set task:7 state:2
+Set task:5 state:3
+2020/06/12 18:14:49 file: ../pg-tom_sawyer.txt dequeue
+2020/06/12 18:14:49 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:14:49.468572 +0800 CST m=+1.090121041}
+2020/06/12 18:14:49 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:14:49.468572 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:14:49.468572 +0800 CST}
+Set task:8 state:2
+Set task:8 state:3
+Set task:7 state:3
+2020/06/12 18:14:52 Heartbeat: worker-2 task-8 time-2020-06-12 18:14:52.404572 +0800 CST m=+4.026077553
+2020/06/12 18:14:52 Heartbeat: worker-1 task-7 time-2020-06-12 18:14:52.405161 +0800 CST m=+4.026666647
+2020/06/12 18:14:54 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc000150278 2:0xc000112130 3:0xc000112498 4:0xc00010a5a8 5:0xc00010a918 6:0xc0001126e8 7:0xc00010ab68 8:0xc000112938] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:14:54 all map task done. now starting reduce.
+2020/06/12 18:14:54 file: mr-*-1 dequeue
+2020/06/12 18:14:54 file: mr-*-0 dequeue
+2020/06/12 18:14:54 get task &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:14:54.473631 +0800 CST m=+6.095106162}
+2020/06/12 18:14:54 get task &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:14:54.473668 +0800 CST m=+6.095142751}
+2020/06/12 18:14:54 task: &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:14:54.473631 +0800 CST}
+working on &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:14:54.473631 +0800 CST}
+2020/06/12 18:14:54 task: &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:14:54.473668 +0800 CST}
+working on &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:14:54.473668 +0800 CST}
+Set task:9 state:2
+Set task:10 state:2
+Set task:9 state:3
+Set task:10 state:3
+2020/06/12 18:14:54 file: mr-*-2 dequeue
+2020/06/12 18:14:54 get task &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:14:54.551377 +0800 CST m=+6.172850470}
+2020/06/12 18:14:54 task: &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:14:54.551377 +0800 CST}
+working on &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:14:54.551377 +0800 CST}
+all tasks sent already
+Set task:11 state:2
+2020/06/12 18:14:54 task: <nil>
+2020/06/12 18:14:54 no task to run, exist
+Set task:11 state:3
+all tasks sent already
+2020/06/12 18:14:54 task: <nil>
+2020/06/12 18:14:54 no task to run, exist
+--- indexer test: PASS
+2020/06/12 18:15:04 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc000150278 2:0xc000112130 3:0xc000112498 4:0xc00010a5a8 5:0xc00010a918 6:0xc0001126e8 7:0xc00010ab68 8:0xc000112938 9:0xc00010af30 10:0xc000112dd0 11:0xc0001508b0] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:04 all reduce task done
+2020/06/12 18:15:06 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/12 18:15:06 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/12 18:15:06 file: ../pg-being_ernest.txt enqueue
+2020/06/12 18:15:07 worker-1 registerd
+2020/06/12 18:15:07 worker-2 registerd
+2020/06/12 18:15:07 file: ../pg-being_ernest.txt dequeue
+2020/06/12 18:15:07 file: ../pg-dorian_gray.txt enqueue
+2020/06/12 18:15:07 get task &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:07.779806 +0800 CST m=+1.325765868}
+2020/06/12 18:15:07 file: ../pg-dorian_gray.txt dequeue
+2020/06/12 18:15:07 file: ../pg-frankenstein.txt enqueue
+2020/06/12 18:15:07 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:07.780047 +0800 CST m=+1.326006970}
+2020/06/12 18:15:07 task: &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:07.779806 +0800 CST}
+working on &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:07.779806 +0800 CST}
+2020/06/12 18:15:07 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:07.780047 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:07.780047 +0800 CST}
+Set task:1 state:2
+Set task:2 state:2
+Set task:1 state:3
+Set task:2 state:3
+2020/06/12 18:15:08 file: ../pg-frankenstein.txt dequeue
+2020/06/12 18:15:08 get task &{WorkerID:2 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:08.790566 +0800 CST m=+2.336511159}
+2020/06/12 18:15:08 file: ../pg-grimm.txt enqueue
+2020/06/12 18:15:08 task: &{WorkerID:2 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:08.790566 +0800 CST}
+working on &{WorkerID:2 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:08.790566 +0800 CST}
+2020/06/12 18:15:08 file: ../pg-grimm.txt dequeue
+2020/06/12 18:15:08 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/12 18:15:08 get task &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:08.791177 +0800 CST m=+2.337122184}
+Set task:3 state:2
+2020/06/12 18:15:08 task: &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:08.791177 +0800 CST}
+working on &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:08.791177 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+Set task:4 state:3
+2020/06/12 18:15:09 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/12 18:15:09 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:09.801811 +0800 CST m=+3.347741154}
+2020/06/12 18:15:09 file: ../pg-metamorphosis.txt enqueue
+2020/06/12 18:15:09 file: ../pg-metamorphosis.txt dequeue
+2020/06/12 18:15:09 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/12 18:15:09 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:09.801925 +0800 CST m=+3.347855599}
+2020/06/12 18:15:09 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:09.801811 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:09.801811 +0800 CST}
+2020/06/12 18:15:09 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:09.801925 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:09.801925 +0800 CST}
+Set task:5 state:2
+Set task:6 state:2
+2020/06/12 18:15:10 Heartbeat: worker-1 task-5 time-2020-06-12 18:15:10.781929 +0800 CST m=+4.327845328
+2020/06/12 18:15:10 Heartbeat: worker-2 task-6 time-2020-06-12 18:15:10.781932 +0800 CST m=+4.327847833
+Set task:5 state:3
+Set task:6 state:3
+2020/06/12 18:15:10 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/12 18:15:10 file: ../pg-tom_sawyer.txt enqueue
+2020/06/12 18:15:10 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:10.809578 +0800 CST m=+4.355493497}
+2020/06/12 18:15:10 file: ../pg-tom_sawyer.txt dequeue
+2020/06/12 18:15:10 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:10.809661 +0800 CST m=+4.355576552}
+2020/06/12 18:15:10 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:10.809661 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:10.809661 +0800 CST}
+2020/06/12 18:15:10 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:10.809578 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:10.809578 +0800 CST}
+Set task:8 state:2
+Set task:7 state:2
+Set task:7 state:3
+Set task:8 state:3
+2020/06/12 18:15:13 Heartbeat: worker-2 task-8 time-2020-06-12 18:15:13.784246 +0800 CST m=+7.330118073
+2020/06/12 18:15:13 Heartbeat: worker-1 task-7 time-2020-06-12 18:15:13.784404 +0800 CST m=+7.330275767
+2020/06/12 18:15:15 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc000010248 2:0xc000122480 3:0xc0001de128 4:0xc000010510 5:0xc000122820 6:0xc000010758 7:0xc0001de5b8 8:0xc0000109d0] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:15 all map task done. now starting reduce.
+2020/06/12 18:15:15 file: mr-*-1 dequeue
+2020/06/12 18:15:15 file: mr-*-0 dequeue
+2020/06/12 18:15:15 get task &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:15:15.812108 +0800 CST m=+9.357949359}
+2020/06/12 18:15:15 get task &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:15:15.81214 +0800 CST m=+9.357981902}
+2020/06/12 18:15:15 task: &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:15:15.812108 +0800 CST}
+working on &{WorkerID:2 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:15:15.812108 +0800 CST}
+2020/06/12 18:15:15 task: &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:15:15.81214 +0800 CST}
+working on &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:15:15.81214 +0800 CST}
+Set task:9 state:2
+Set task:10 state:2
+Set task:10 state:3
+Set task:9 state:3
+2020/06/12 18:15:15 file: mr-*-2 dequeue
+2020/06/12 18:15:15 get task &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:15:15.815442 +0800 CST m=+9.361284057}
+all tasks sent already
+2020/06/12 18:15:15 task: <nil>
+2020/06/12 18:15:15 no task to run, exist
+2020/06/12 18:15:15 task: &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:15:15.815442 +0800 CST}
+working on &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:15:15.815442 +0800 CST}
+Set task:11 state:2
+Set task:11 state:3
+all tasks sent already
+2020/06/12 18:15:15 task: <nil>
+2020/06/12 18:15:15 no task to run, exist
+--- map parallelism test: PASS
+2020/06/12 18:15:25 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc000010248 2:0xc000122480 3:0xc0001de128 4:0xc000010510 5:0xc000122820 6:0xc000010758 7:0xc0001de5b8 8:0xc0000109d0 9:0xc000122cf8 10:0xc0000109e8 11:0xc000123060] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:25 all reduce task done
+2020/06/12 18:15:27 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/12 18:15:27 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/12 18:15:27 file: ../pg-being_ernest.txt enqueue
+2020/06/12 18:15:28 worker-1 registerd
+2020/06/12 18:15:28 worker-2 registerd
+2020/06/12 18:15:28 file: ../pg-being_ernest.txt dequeue
+2020/06/12 18:15:28 get task &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:28.875954 +0800 CST m=+1.354944119}
+2020/06/12 18:15:28 file: ../pg-dorian_gray.txt enqueue
+2020/06/12 18:15:28 task: &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:28.875954 +0800 CST}
+working on &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:28.875954 +0800 CST}
+2020/06/12 18:15:28 file: ../pg-dorian_gray.txt dequeue
+2020/06/12 18:15:28 file: ../pg-frankenstein.txt enqueue
+2020/06/12 18:15:28 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:28.87673 +0800 CST m=+1.355720141}
+2020/06/12 18:15:28 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:28.87673 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:28.87673 +0800 CST}
+Set task:1 state:2
+Set task:2 state:2
+Set task:1 state:3
+Set task:2 state:3
+2020/06/12 18:15:28 file: ../pg-frankenstein.txt dequeue
+2020/06/12 18:15:28 file: ../pg-grimm.txt enqueue
+2020/06/12 18:15:28 get task &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:28.879366 +0800 CST m=+1.358355897}
+2020/06/12 18:15:28 task: &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:28.879366 +0800 CST}
+working on &{WorkerID:1 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:28.879366 +0800 CST}
+2020/06/12 18:15:28 file: ../pg-grimm.txt dequeue
+2020/06/12 18:15:28 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/12 18:15:28 get task &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:28.879781 +0800 CST m=+1.358771188}
+Set task:3 state:2
+2020/06/12 18:15:28 task: &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:28.879781 +0800 CST}
+working on &{WorkerID:2 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:28.879781 +0800 CST}
+Set task:4 state:2
+Set task:3 state:3
+2020/06/12 18:15:28 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/12 18:15:28 file: ../pg-metamorphosis.txt enqueue
+2020/06/12 18:15:28 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:28.882208 +0800 CST m=+1.361198330}
+Set task:4 state:3
+2020/06/12 18:15:28 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:28.882208 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:28.882208 +0800 CST}
+2020/06/12 18:15:28 file: ../pg-metamorphosis.txt dequeue
+2020/06/12 18:15:28 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/12 18:15:28 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:28.882791 +0800 CST m=+1.361781019}
+Set task:5 state:2
+2020/06/12 18:15:28 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:28.882791 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:28.882791 +0800 CST}
+Set task:6 state:2
+Set task:5 state:3
+Set task:6 state:3
+2020/06/12 18:15:28 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/12 18:15:28 file: ../pg-tom_sawyer.txt enqueue
+2020/06/12 18:15:28 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:28.885505 +0800 CST m=+1.364494732}
+2020/06/12 18:15:28 file: ../pg-tom_sawyer.txt dequeue
+2020/06/12 18:15:28 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:28.885669 +0800 CST m=+1.364659482}
+2020/06/12 18:15:28 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:28.885669 +0800 CST}
+2020/06/12 18:15:28 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:28.885505 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:28.885669 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:28.885505 +0800 CST}
+Set task:8 state:2
+Set task:7 state:2
+Set task:8 state:3
+Set task:7 state:3
+2020/06/12 18:15:31 Heartbeat: worker-1 task-7 time-2020-06-12 18:15:31.880836 +0800 CST m=+4.359782314
+2020/06/12 18:15:31 Heartbeat: worker-2 task-8 time-2020-06-12 18:15:31.881013 +0800 CST m=+4.359958778
+2020/06/12 18:15:33 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc000112178 2:0xc000112200 3:0xc000010678 4:0xc00023e248 5:0xc00023e498 6:0xc000224250 7:0xc0000108d8 8:0xc00023e7f8] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:33 all map task done. now starting reduce.
+2020/06/12 18:15:33 file: mr-*-1 dequeue
+2020/06/12 18:15:33 file: mr-*-0 dequeue
+2020/06/12 18:15:33 get task &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:15:33.889598 +0800 CST m=+6.368514586}
+2020/06/12 18:15:33 get task &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:15:33.889619 +0800 CST m=+6.368534813}
+2020/06/12 18:15:33 task: &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:15:33.889619 +0800 CST}
+working on &{WorkerID:2 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:15:33.889619 +0800 CST}
+2020/06/12 18:15:33 task: &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:15:33.889598 +0800 CST}
+working on &{WorkerID:1 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:15:33.889598 +0800 CST}
+Set task:10 state:2
+Set task:9 state:2
+2020/06/12 18:15:34 Heartbeat: worker-1 task-9 time-2020-06-12 18:15:34.883175 +0800 CST m=+7.362076700
+2020/06/12 18:15:34 Heartbeat: worker-2 task-10 time-2020-06-12 18:15:34.883347 +0800 CST m=+7.362248130
+Set task:9 state:3
+2020/06/12 18:15:34 file: mr-*-2 dequeue
+2020/06/12 18:15:34 get task &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:15:34.896287 +0800 CST m=+7.375188579}
+2020/06/12 18:15:34 task: &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:15:34.896287 +0800 CST}
+working on &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:15:34.896287 +0800 CST}
+Set task:11 state:2
+2020/06/12 18:15:37 Heartbeat: worker-2 task-10 time-2020-06-12 18:15:37.88555 +0800 CST m=+10.364407082
+2020/06/12 18:15:37 Heartbeat: worker-1 task-11 time-2020-06-12 18:15:37.885551 +0800 CST m=+10.364407895
+Set task:11 state:3
+Set task:10 state:3
+all tasks sent already
+all tasks sent already
+2020/06/12 18:15:38 task: <nil>
+2020/06/12 18:15:38 no task to run, exist
+2020/06/12 18:15:38 task: <nil>
+2020/06/12 18:15:38 no task to run, exist
+--- reduce parallelism test: PASS
+2020/06/12 18:15:44 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc000112178 2:0xc000112200 3:0xc000010678 4:0xc00023e248 5:0xc00023e498 6:0xc000224250 7:0xc0000108d8 8:0xc00023e7f8 9:0xc000224730 10:0xc0001128e8 11:0xc000224bd8] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:44 all reduce task done
+*** Starting crash test.
+2020/06/12 18:15:46 [../pg-being_ernest.txt ../pg-dorian_gray.txt ../pg-frankenstein.txt ../pg-grimm.txt ../pg-huckleberry_finn.txt ../pg-metamorphosis.txt ../pg-sherlock_holmes.txt ../pg-tom_sawyer.txt]
+2020/06/12 18:15:46 file: ../pg-being_ernest.txt enqueue
+2020/06/12 18:15:46 rpc.Register: method "Done" has 1 input parameters; needs exactly three
+2020/06/12 18:15:48 worker-1 registerd
+2020/06/12 18:15:48 worker-2 registerd
+2020/06/12 18:15:48 file: ../pg-being_ernest.txt dequeue
+2020/06/12 18:15:48 get task &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:48.256882 +0800 CST m=+1.325010882}
+2020/06/12 18:15:48 task: &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:48.256882 +0800 CST}
+working on &{WorkerID:1 TaskID:1 NReduce:3 Phase:0 Filename:../pg-being_ernest.txt State:1 BeatTime:2020-06-12 18:15:48.256882 +0800 CST}
+2020/06/12 18:15:48 file: ../pg-dorian_gray.txt enqueue
+2020/06/12 18:15:48 file: ../pg-frankenstein.txt enqueue
+2020/06/12 18:15:48 file: ../pg-dorian_gray.txt dequeue
+2020/06/12 18:15:48 get task &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:48.257661 +0800 CST m=+1.325790114}
+2020/06/12 18:15:48 worker-3 registerd
+2020/06/12 18:15:48 task: &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:48.257661 +0800 CST}
+working on &{WorkerID:2 TaskID:2 NReduce:3 Phase:0 Filename:../pg-dorian_gray.txt State:1 BeatTime:2020-06-12 18:15:48.257661 +0800 CST}
+2020/06/12 18:15:48 worker-4 registerd
+Set task:1 state:2
+2020/06/12 18:15:48 file: ../pg-frankenstein.txt dequeue
+2020/06/12 18:15:48 get task &{WorkerID:3 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:48.258429 +0800 CST m=+1.326558048}
+2020/06/12 18:15:48 file: ../pg-grimm.txt enqueue
+Set task:2 state:2
+2020/06/12 18:15:48 task: &{WorkerID:3 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:48.258429 +0800 CST}
+working on &{WorkerID:3 TaskID:3 NReduce:3 Phase:0 Filename:../pg-frankenstein.txt State:1 BeatTime:2020-06-12 18:15:48.258429 +0800 CST}
+2020/06/12 18:15:48 file: ../pg-grimm.txt dequeue
+2020/06/12 18:15:48 file: ../pg-huckleberry_finn.txt enqueue
+2020/06/12 18:15:48 get task &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698}
+2020/06/12 18:15:48 task: &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:48.258975 +0800 CST}
+working on &{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:15:48.258975 +0800 CST}
+Set task:3 state:2
+Set task:4 state:2
+Set task:1 state:3
+Set task:2 state:3
+2020/06/12 18:15:48 file: ../pg-huckleberry_finn.txt dequeue
+2020/06/12 18:15:48 file: ../pg-metamorphosis.txt enqueue
+2020/06/12 18:15:48 get task &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:48.261175 +0800 CST m=+1.329304705}
+2020/06/12 18:15:48 task: &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:48.261175 +0800 CST}
+working on &{WorkerID:1 TaskID:5 NReduce:3 Phase:0 Filename:../pg-huckleberry_finn.txt State:1 BeatTime:2020-06-12 18:15:48.261175 +0800 CST}
+2020/06/12 18:15:48 file: ../pg-metamorphosis.txt dequeue
+2020/06/12 18:15:48 file: ../pg-sherlock_holmes.txt enqueue
+2020/06/12 18:15:48 get task &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:48.261763 +0800 CST m=+1.329892090}
+Set task:5 state:2
+2020/06/12 18:15:48 task: &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:48.261763 +0800 CST}
+working on &{WorkerID:2 TaskID:6 NReduce:3 Phase:0 Filename:../pg-metamorphosis.txt State:1 BeatTime:2020-06-12 18:15:48.261763 +0800 CST}
+Set task:6 state:2
+Set task:5 state:3
+2020/06/12 18:15:48 file: ../pg-sherlock_holmes.txt dequeue
+2020/06/12 18:15:48 file: ../pg-tom_sawyer.txt enqueue
+2020/06/12 18:15:48 get task &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:48.264913 +0800 CST m=+1.333041818}
+2020/06/12 18:15:48 task: &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:48.264913 +0800 CST}
+working on &{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:15:48.264913 +0800 CST}
+Set task:7 state:2
+Set task:6 state:3
+2020/06/12 18:15:48 file: ../pg-tom_sawyer.txt dequeue
+2020/06/12 18:15:48 get task &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:48.433488 +0800 CST m=+1.501615154}
+2020/06/12 18:15:48 task: &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:48.433488 +0800 CST}
+working on &{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:15:48.433488 +0800 CST}
+Set task:8 state:2
+Set task:3 state:3
+2020/06/12 18:15:49 worker-5 registerd
+2020/06/12 18:15:49 worker-6 registerd
+2020/06/12 18:15:51 Heartbeat: worker-3 task-3 time-2020-06-12 18:15:51.263067 +0800 CST m=+4.331152386
+2020/06/12 18:15:52 Heartbeat: worker-5 task-0 time-2020-06-12 18:15:52.30447 +0800 CST m=+5.372540076
+2020/06/12 18:15:52 Heartbeat: worker-6 task-0 time-2020-06-12 18:15:52.470686 +0800 CST m=+5.538753314
+2020/06/12 18:15:53 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:15:53 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:54 Heartbeat: worker-3 task-3 time-2020-06-12 18:15:54.265386 +0800 CST m=+7.333426463
+2020/06/12 18:15:54 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:15:54 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:55 Heartbeat: worker-5 task-0 time-2020-06-12 18:15:55.309812 +0800 CST m=+8.377837358
+2020/06/12 18:15:55 task:&{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:2 BeatTime:2020-06-12 18:15:48.433488 +0800 CST m=+1.501615154} running
+2020/06/12 18:15:55 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:55 Heartbeat: worker-6 task-0 time-2020-06-12 18:15:55.472649 +0800 CST m=+8.540672208
+2020/06/12 18:15:56 task:&{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:15:48.264913 +0800 CST m=+1.333041818} running
+2020/06/12 18:15:56 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:57 Heartbeat: worker-3 task-3 time-2020-06-12 18:15:57.270849 +0800 CST m=+10.338844969
+2020/06/12 18:15:57 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:15:57 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:58 Heartbeat: worker-5 task-0 time-2020-06-12 18:15:58.311945 +0800 CST m=+11.379926176
+2020/06/12 18:15:58 task:&{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:15:48.264913 +0800 CST m=+1.333041818} running
+2020/06/12 18:15:58 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:58 Heartbeat: worker-6 task-0 time-2020-06-12 18:15:58.474793 +0800 CST m=+11.542771530
+2020/06/12 18:15:59 rpc: Master.GetTask(&{3 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:15:59 worker:3 get task fail,exit
+2020/06/12 18:15:59 rpc: Master.GetTask(&{5 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:15:59 worker:5 get task fail,exit
+2020/06/12 18:15:59 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:15:59 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:15:59 rpc: Master.GetTask(&{6 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:15:59 worker:6 get task fail,exit
+2020/06/12 18:16:00 worker-7 registerd
+2020/06/12 18:16:00 worker-8 registerd
+2020/06/12 18:16:00 task:&{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:2 BeatTime:2020-06-12 18:15:48.433488 +0800 CST m=+1.501615154} running
+2020/06/12 18:16:00 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:00 worker-9 registerd
+2020/06/12 18:16:01 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:01 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:02 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:02 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:03 Heartbeat: worker-7 task-0 time-2020-06-12 18:16:03.088179 +0800 CST m=+16.156089270
+2020/06/12 18:16:03 Heartbeat: worker-8 task-0 time-2020-06-12 18:16:03.343725 +0800 CST m=+16.411632057
+2020/06/12 18:16:03 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:03 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:03 Heartbeat: worker-9 task-0 time-2020-06-12 18:16:03.518513 +0800 CST m=+16.586416543
+2020/06/12 18:16:04 task:&{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:15:48.264913 +0800 CST m=+1.333041818} running
+2020/06/12 18:16:04 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:05 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:05 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:06 Heartbeat: worker-7 task-0 time-2020-06-12 18:16:06.090699 +0800 CST m=+19.158564956
+2020/06/12 18:16:06 Heartbeat: worker-8 task-0 time-2020-06-12 18:16:06.347532 +0800 CST m=+19.415393891
+2020/06/12 18:16:06 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:2 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:06 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:06 Heartbeat: worker-9 task-0 time-2020-06-12 18:16:06.52294 +0800 CST m=+19.590799718
+Set task:7 state:4
+Set task:8 state:4
+Set task:4 state:4
+2020/06/12 18:16:07 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:07 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:08 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:08 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:09 Heartbeat: worker-7 task-0 time-2020-06-12 18:16:09.093033 +0800 CST m=+22.160855024
+2020/06/12 18:16:09 Heartbeat: worker-8 task-0 time-2020-06-12 18:16:09.352138 +0800 CST m=+22.419956194
+2020/06/12 18:16:09 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:09 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:09 Heartbeat: worker-9 task-0 time-2020-06-12 18:16:09.526263 +0800 CST m=+22.594078515
+2020/06/12 18:16:10 rpc: Master.GetTask(&{7 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:10 worker:7 get task fail,exit
+2020/06/12 18:16:10 rpc: Master.GetTask(&{8 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:10 worker:8 get task fail,exit
+2020/06/12 18:16:10 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} running
+2020/06/12 18:16:10 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:10 rpc: Master.GetTask(&{9 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:10 worker:9 get task fail,exit
+2020/06/12 18:16:11 worker-10 registerd
+2020/06/12 18:16:11 task:&{WorkerID:1 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:15:48.264913 +0800 CST m=+1.333041818} retry
+2020/06/12 18:16:11 task: &{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:16:11.127145 +0800 CST}
+working on &{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:16:11.127145 +0800 CST}
+Set task:7 state:2
+2020/06/12 18:16:11 worker-1 registerd
+2020/06/12 18:16:11 task:&{WorkerID:4 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:4 BeatTime:2020-06-12 18:15:48.258975 +0800 CST m=+1.327104698} retry
+2020/06/12 18:16:11 task: &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:16:11.382242 +0800 CST}
+working on &{WorkerID:1 TaskID:4 NReduce:3 Phase:0 Filename:../pg-grimm.txt State:1 BeatTime:2020-06-12 18:16:11.382242 +0800 CST}
+Set task:4 state:2
+Set task:4 state:3
+2020/06/12 18:16:11 task:&{WorkerID:2 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:4 BeatTime:2020-06-12 18:15:48.433488 +0800 CST m=+1.501615154} retry
+2020/06/12 18:16:11 task: &{WorkerID:1 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:16:11.38594 +0800 CST}
+working on &{WorkerID:1 TaskID:8 NReduce:3 Phase:0 Filename:../pg-tom_sawyer.txt State:1 BeatTime:2020-06-12 18:16:11.38594 +0800 CST}
+Set task:8 state:2
+Set task:8 state:3
+2020/06/12 18:16:11 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:11 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:11 worker-2 registerd
+2020/06/12 18:16:12 worker-4 registerd
+2020/06/12 18:16:12 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:12 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:13 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:13 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:14 Heartbeat: worker-1 task-8 time-2020-06-12 18:16:14.385626 +0800 CST m=+27.453369714
+2020/06/12 18:16:14 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:14 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:14 Heartbeat: worker-2 task-0 time-2020-06-12 18:16:14.558722 +0800 CST m=+27.626463149
+2020/06/12 18:16:15 Heartbeat: worker-4 task-0 time-2020-06-12 18:16:15.169382 +0800 CST m=+28.237113583
+2020/06/12 18:16:15 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:15 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:16 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:16 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:17 Heartbeat: worker-1 task-8 time-2020-06-12 18:16:17.38851 +0800 CST m=+30.456208755
+2020/06/12 18:16:17 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:17 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:17 Heartbeat: worker-2 task-0 time-2020-06-12 18:16:17.565356 +0800 CST m=+30.633052133
+2020/06/12 18:16:18 Heartbeat: worker-4 task-0 time-2020-06-12 18:16:18.17592 +0800 CST m=+31.243607382
+2020/06/12 18:16:18 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:18 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:19 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:19 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:20 Heartbeat: worker-1 task-8 time-2020-06-12 18:16:20.392337 +0800 CST m=+33.459991944
+2020/06/12 18:16:20 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:20 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:20 Heartbeat: worker-2 task-0 time-2020-06-12 18:16:20.569213 +0800 CST m=+33.636865497
+2020/06/12 18:16:21 Heartbeat: worker-4 task-0 time-2020-06-12 18:16:21.182508 +0800 CST m=+34.250151589
+2020/06/12 18:16:21 rpc: Master.GetTask(&{1 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:21 worker:1 get task fail,exit
+2020/06/12 18:16:21 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:21 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:21 rpc: Master.GetTask(&{2 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:21 worker:2 get task fail,exit
+2020/06/12 18:16:22 rpc: Master.GetTask(&{4 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:22 worker:4 get task fail,exit
+2020/06/12 18:16:22 worker-1 registerd
+2020/06/12 18:16:22 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:22 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:22 worker-2 registerd
+2020/06/12 18:16:23 worker-3 registerd
+2020/06/12 18:16:23 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:23 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:24 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:24 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:25 Heartbeat: worker-1 task-0 time-2020-06-12 18:16:25.432222 +0800 CST m=+38.499802904
+2020/06/12 18:16:25 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:25 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:25 Heartbeat: worker-2 task-0 time-2020-06-12 18:16:25.602494 +0800 CST m=+38.670071724
+2020/06/12 18:16:26 Heartbeat: worker-3 task-0 time-2020-06-12 18:16:26.210519 +0800 CST m=+39.278088127
+2020/06/12 18:16:26 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:2 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:26 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+Set task:7 state:4
+2020/06/12 18:16:27 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:27 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:28 Heartbeat: worker-1 task-0 time-2020-06-12 18:16:28.437178 +0800 CST m=+41.504713981
+2020/06/12 18:16:28 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:28 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:28 Heartbeat: worker-2 task-0 time-2020-06-12 18:16:28.608468 +0800 CST m=+41.676001513
+2020/06/12 18:16:29 Heartbeat: worker-3 task-0 time-2020-06-12 18:16:29.213231 +0800 CST m=+42.280755715
+2020/06/12 18:16:29 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:29 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:30 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:30 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:31 Heartbeat: worker-1 task-0 time-2020-06-12 18:16:31.439074 +0800 CST m=+44.506565826
+2020/06/12 18:16:31 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:31 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:31 Heartbeat: worker-2 task-0 time-2020-06-12 18:16:31.611043 +0800 CST m=+44.678532389
+2020/06/12 18:16:32 Heartbeat: worker-3 task-0 time-2020-06-12 18:16:32.217659 +0800 CST m=+45.285139487
+2020/06/12 18:16:32 rpc: Master.GetTask(&{1 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:32 worker:1 get task fail,exit
+2020/06/12 18:16:32 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} running
+2020/06/12 18:16:32 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:32 rpc: Master.GetTask(&{2 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:32 worker:2 get task fail,exit
+2020/06/12 18:16:33 rpc: Master.GetTask(&{3 0}) timeout: /var/tmp/824-mr-501
+2020/06/12 18:16:33 worker:3 get task fail,exit
+2020/06/12 18:16:33 worker-10 registerd
+2020/06/12 18:16:33 task:&{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:4 BeatTime:2020-06-12 18:16:11.127145 +0800 CST m=+24.194936667} retry
+2020/06/12 18:16:33 task: &{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:16:33.465974 +0800 CST}
+working on &{WorkerID:10 TaskID:7 NReduce:3 Phase:0 Filename:../pg-sherlock_holmes.txt State:1 BeatTime:2020-06-12 18:16:33.465974 +0800 CST}
+Set task:7 state:2
+Set task:7 state:3
+2020/06/12 18:16:33 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:33 all map task done. now starting reduce.
+all tasks sent already
+2020/06/12 18:16:33 file: mr-*-0 dequeue
+2020/06/12 18:16:33 file: mr-*-2 dequeue
+all tasks sent already
+2020/06/12 18:16:33 get task &{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:16:33.535789 +0800 CST m=+46.603249954}
+all tasks sent already
+2020/06/12 18:16:33 file: mr-*-1 dequeue
+all tasks sent already
+2020/06/12 18:16:33 get task &{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:16:33.535899 +0800 CST m=+46.603359915}
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+all tasks sent already
+2020/06/12 18:16:33 task: <nil>
+2020/06/12 18:16:33 no task to run, exist
+2020/06/12 18:16:33 get task &{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:16:33.535828 +0800 CST m=+46.603288145}
+2020/06/12 18:16:33 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:33 task: <nil>
+2020/06/12 18:16:33 no task to run, exist
+2020/06/12 18:16:34 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:34 task: <nil>
+2020/06/12 18:16:34 no task to run, exist
+2020/06/12 18:16:34 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:34 task: <nil>
+2020/06/12 18:16:34 no task to run, exist
+2020/06/12 18:16:34 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:34 task: <nil>
+2020/06/12 18:16:34 no task to run, exist
+2020/06/12 18:16:35 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:35 task: <nil>
+2020/06/12 18:16:35 no task to run, exist
+2020/06/12 18:16:35 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:35 task: <nil>
+2020/06/12 18:16:35 no task to run, exist
+2020/06/12 18:16:35 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:35 task: <nil>
+2020/06/12 18:16:35 no task to run, exist
+2020/06/12 18:16:36 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:36 task: <nil>
+2020/06/12 18:16:36 no task to run, exist
+2020/06/12 18:16:36 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:36 task: <nil>
+2020/06/12 18:16:36 no task to run, exist
+2020/06/12 18:16:36 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:36 task: <nil>
+2020/06/12 18:16:36 no task to run, exist
+2020/06/12 18:16:37 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:37 task: <nil>
+2020/06/12 18:16:37 no task to run, exist
+2020/06/12 18:16:37 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:37 task: <nil>
+2020/06/12 18:16:37 no task to run, exist
+2020/06/12 18:16:37 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:37 task: <nil>
+2020/06/12 18:16:37 no task to run, exist
+2020/06/12 18:16:38 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:38 task: <nil>
+2020/06/12 18:16:38 no task to run, exist
+2020/06/12 18:16:38 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:38 task: <nil>
+2020/06/12 18:16:38 no task to run, exist
+2020/06/12 18:16:38 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:38 task: <nil>
+2020/06/12 18:16:38 no task to run, exist
+2020/06/12 18:16:39 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:39 task: <nil>
+2020/06/12 18:16:39 no task to run, exist
+2020/06/12 18:16:39 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:39 task: <nil>
+2020/06/12 18:16:39 no task to run, exist
+2020/06/12 18:16:39 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:39 task: <nil>
+2020/06/12 18:16:39 no task to run, exist
+2020/06/12 18:16:40 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:40 task: <nil>
+2020/06/12 18:16:40 no task to run, exist
+2020/06/12 18:16:40 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:40 task: <nil>
+2020/06/12 18:16:40 no task to run, exist
+2020/06/12 18:16:40 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:40 task: <nil>
+2020/06/12 18:16:40 no task to run, exist
+2020/06/12 18:16:41 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:41 task: <nil>
+2020/06/12 18:16:41 no task to run, exist
+2020/06/12 18:16:41 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:41 task: <nil>
+2020/06/12 18:16:41 no task to run, exist
+2020/06/12 18:16:41 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:41 task: <nil>
+2020/06/12 18:16:41 no task to run, exist
+2020/06/12 18:16:42 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:42 task: <nil>
+2020/06/12 18:16:42 no task to run, exist
+2020/06/12 18:16:42 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:42 task: <nil>
+2020/06/12 18:16:42 no task to run, exist
+2020/06/12 18:16:42 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:42 task: <nil>
+2020/06/12 18:16:42 no task to run, exist
+2020/06/12 18:16:43 task:&{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:16:33.535899 +0800 CST m=+46.603359915} running
+2020/06/12 18:16:43 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:43 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:43 task: <nil>
+2020/06/12 18:16:43 no task to run, exist
+2020/06/12 18:16:43 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:43 task: <nil>
+2020/06/12 18:16:43 no task to run, exist
+2020/06/12 18:16:44 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:44 task: <nil>
+2020/06/12 18:16:44 no task to run, exist
+2020/06/12 18:16:44 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:44 task: <nil>
+2020/06/12 18:16:44 no task to run, exist
+2020/06/12 18:16:44 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:44 task: <nil>
+2020/06/12 18:16:44 no task to run, exist
+2020/06/12 18:16:45 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:45 task: <nil>
+2020/06/12 18:16:45 no task to run, exist
+2020/06/12 18:16:45 task:&{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:16:33.535899 +0800 CST m=+46.603359915} running
+2020/06/12 18:16:45 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:45 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:45 task: <nil>
+2020/06/12 18:16:45 no task to run, exist
+2020/06/12 18:16:45 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:45 task: <nil>
+2020/06/12 18:16:45 no task to run, exist
+2020/06/12 18:16:46 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:46 task: <nil>
+2020/06/12 18:16:46 no task to run, exist
+2020/06/12 18:16:46 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:46 task: <nil>
+2020/06/12 18:16:46 no task to run, exist
+Set task:9 state:4
+Set task:10 state:4
+Set task:11 state:4
+2020/06/12 18:16:47 worker-3 registerd
+2020/06/12 18:16:47 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:4 BeatTime:2020-06-12 18:16:33.535789 +0800 CST m=+46.603249954} retry
+2020/06/12 18:16:47 task: &{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:16:47.03422 +0800 CST}
+working on &{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:1 BeatTime:2020-06-12 18:16:47.03422 +0800 CST}
+Set task:9 state:2
+2020/06/12 18:16:47 worker-10 registerd
+2020/06/12 18:16:47 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:4 BeatTime:2020-06-12 18:16:33.535828 +0800 CST m=+46.603288145} retry
+2020/06/12 18:16:47 task: &{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:16:47.127959 +0800 CST}
+working on &{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:16:47.127959 +0800 CST}
+Set task:10 state:2
+2020/06/12 18:16:47 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-12 18:16:47.03422 +0800 CST m=+60.101481420} running
+2020/06/12 18:16:47 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:47 worker-1 registerd
+2020/06/12 18:16:47 task:&{WorkerID:5 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:4 BeatTime:2020-06-12 18:16:33.535899 +0800 CST m=+46.603359915} retry
+2020/06/12 18:16:47 task: &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:16:47.738532 +0800 CST}
+working on &{WorkerID:1 TaskID:11 NReduce:3 Phase:1 Filename:mr-*-1 State:1 BeatTime:2020-06-12 18:16:47.738532 +0800 CST}
+Set task:11 state:2
+Set task:11 state:3
+all tasks sent already
+2020/06/12 18:16:47 task: <nil>
+2020/06/12 18:16:47 no task to run, exist
+2020/06/12 18:16:48 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:48 task: <nil>
+2020/06/12 18:16:48 no task to run, exist
+2020/06/12 18:16:49 worker-6 registerd
+all tasks sent already
+2020/06/12 18:16:49 task: <nil>
+2020/06/12 18:16:49 no task to run, exist
+2020/06/12 18:16:49 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-12 18:16:47.03422 +0800 CST m=+60.101481420} running
+2020/06/12 18:16:49 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:49 worker-5 registerd
+all tasks sent already
+2020/06/12 18:16:49 task: <nil>
+2020/06/12 18:16:49 no task to run, exist
+2020/06/12 18:16:50 Heartbeat: worker-3 task-9 time-2020-06-12 18:16:50.035696 +0800 CST m=+63.102912538
+2020/06/12 18:16:50 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:50 task: <nil>
+2020/06/12 18:16:50 no task to run, exist
+2020/06/12 18:16:50 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:50 task: <nil>
+2020/06/12 18:16:50 no task to run, exist
+2020/06/12 18:16:51 worker-6 registerd
+all tasks sent already
+2020/06/12 18:16:51 task: <nil>
+2020/06/12 18:16:51 no task to run, exist
+2020/06/12 18:16:51 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-12 18:16:50.035696 +0800 CST m=+63.102912538} running
+2020/06/12 18:16:51 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:51 worker-5 registerd
+all tasks sent already
+2020/06/12 18:16:51 task: <nil>
+2020/06/12 18:16:51 no task to run, exist
+2020/06/12 18:16:52 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:52 task: <nil>
+2020/06/12 18:16:52 no task to run, exist
+2020/06/12 18:16:52 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:52 task: <nil>
+2020/06/12 18:16:52 no task to run, exist
+2020/06/12 18:16:53 Heartbeat: worker-3 task-9 time-2020-06-12 18:16:53.038094 +0800 CST m=+66.105266555
+2020/06/12 18:16:53 worker-6 registerd
+all tasks sent already
+2020/06/12 18:16:53 task: <nil>
+2020/06/12 18:16:53 no task to run, exist
+2020/06/12 18:16:53 task:&{WorkerID:3 TaskID:9 NReduce:3 Phase:1 Filename:mr-*-0 State:2 BeatTime:2020-06-12 18:16:53.038094 +0800 CST m=+66.105266555} running
+2020/06/12 18:16:53 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:53 worker-5 registerd
+all tasks sent already
+2020/06/12 18:16:53 task: <nil>
+2020/06/12 18:16:53 no task to run, exist
+2020/06/12 18:16:54 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:54 task: <nil>
+2020/06/12 18:16:54 no task to run, exist
+Set task:9 state:3
+all tasks sent already
+2020/06/12 18:16:54 task: <nil>
+2020/06/12 18:16:54 no task to run, exist
+2020/06/12 18:16:55 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:55 task: <nil>
+2020/06/12 18:16:55 no task to run, exist
+2020/06/12 18:16:55 worker-6 registerd
+all tasks sent already
+2020/06/12 18:16:55 task: <nil>
+2020/06/12 18:16:55 no task to run, exist
+2020/06/12 18:16:55 worker-5 registerd
+all tasks sent already
+2020/06/12 18:16:55 task: <nil>
+2020/06/12 18:16:55 no task to run, exist
+2020/06/12 18:16:55 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} running
+2020/06/12 18:16:55 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:56 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:56 task: <nil>
+2020/06/12 18:16:56 no task to run, exist
+2020/06/12 18:16:56 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:56 task: <nil>
+2020/06/12 18:16:56 no task to run, exist
+2020/06/12 18:16:56 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:56 task: <nil>
+2020/06/12 18:16:56 no task to run, exist
+2020/06/12 18:16:57 worker-6 registerd
+all tasks sent already
+2020/06/12 18:16:57 task: <nil>
+2020/06/12 18:16:57 no task to run, exist
+2020/06/12 18:16:57 worker-5 registerd
+all tasks sent already
+2020/06/12 18:16:57 task: <nil>
+2020/06/12 18:16:57 no task to run, exist
+2020/06/12 18:16:57 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:57 task: <nil>
+2020/06/12 18:16:57 no task to run, exist
+2020/06/12 18:16:57 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} running
+2020/06/12 18:16:57 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:16:58 worker-3 registerd
+all tasks sent already
+2020/06/12 18:16:58 task: <nil>
+2020/06/12 18:16:58 no task to run, exist
+2020/06/12 18:16:58 worker-2 registerd
+all tasks sent already
+2020/06/12 18:16:58 task: <nil>
+2020/06/12 18:16:58 no task to run, exist
+2020/06/12 18:16:58 worker-10 registerd
+all tasks sent already
+2020/06/12 18:16:58 task: <nil>
+2020/06/12 18:16:58 no task to run, exist
+2020/06/12 18:16:59 worker-6 registerd
+all tasks sent already
+2020/06/12 18:16:59 task: <nil>
+2020/06/12 18:16:59 no task to run, exist
+2020/06/12 18:16:59 worker-5 registerd
+all tasks sent already
+2020/06/12 18:16:59 task: <nil>
+2020/06/12 18:16:59 no task to run, exist
+2020/06/12 18:16:59 worker-1 registerd
+all tasks sent already
+2020/06/12 18:16:59 task: <nil>
+2020/06/12 18:16:59 no task to run, exist
+2020/06/12 18:16:59 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} running
+2020/06/12 18:16:59 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:00 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:00 task: <nil>
+2020/06/12 18:17:00 no task to run, exist
+2020/06/12 18:17:00 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:00 task: <nil>
+2020/06/12 18:17:00 no task to run, exist
+2020/06/12 18:17:00 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:00 task: <nil>
+2020/06/12 18:17:00 no task to run, exist
+2020/06/12 18:17:01 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:01 task: <nil>
+2020/06/12 18:17:01 no task to run, exist
+2020/06/12 18:17:01 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:01 task: <nil>
+2020/06/12 18:17:01 no task to run, exist
+2020/06/12 18:17:01 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:01 task: <nil>
+2020/06/12 18:17:01 no task to run, exist
+2020/06/12 18:17:01 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} running
+2020/06/12 18:17:01 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:02 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:02 task: <nil>
+2020/06/12 18:17:02 no task to run, exist
+2020/06/12 18:17:02 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:02 task: <nil>
+2020/06/12 18:17:02 no task to run, exist
+2020/06/12 18:17:02 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:02 task: <nil>
+2020/06/12 18:17:02 no task to run, exist
+2020/06/12 18:17:03 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:03 task: <nil>
+2020/06/12 18:17:03 no task to run, exist
+2020/06/12 18:17:03 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:03 task: <nil>
+2020/06/12 18:17:03 no task to run, exist
+2020/06/12 18:17:03 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:03 task: <nil>
+2020/06/12 18:17:03 no task to run, exist
+2020/06/12 18:17:03 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} running
+2020/06/12 18:17:03 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:04 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:04 task: <nil>
+2020/06/12 18:17:04 no task to run, exist
+2020/06/12 18:17:04 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:04 task: <nil>
+2020/06/12 18:17:04 no task to run, exist
+2020/06/12 18:17:04 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:04 task: <nil>
+2020/06/12 18:17:04 no task to run, exist
+2020/06/12 18:17:05 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:05 task: <nil>
+2020/06/12 18:17:05 no task to run, exist
+2020/06/12 18:17:05 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} running
+2020/06/12 18:17:05 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:05 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:05 task: <nil>
+2020/06/12 18:17:05 no task to run, exist
+2020/06/12 18:17:05 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:05 task: <nil>
+2020/06/12 18:17:05 no task to run, exist
+2020/06/12 18:17:06 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:06 task: <nil>
+2020/06/12 18:17:06 no task to run, exist
+2020/06/12 18:17:06 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:06 task: <nil>
+2020/06/12 18:17:06 no task to run, exist
+2020/06/12 18:17:06 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:06 task: <nil>
+2020/06/12 18:17:06 no task to run, exist
+Set task:10 state:4
+2020/06/12 18:17:07 worker-6 registerd
+2020/06/12 18:17:07 task:&{WorkerID:10 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:4 BeatTime:2020-06-12 18:16:47.127959 +0800 CST m=+60.195219276} retry
+2020/06/12 18:17:07 task: &{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:17:07.467014 +0800 CST}
+working on &{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:17:07.467014 +0800 CST}
+Set task:10 state:2
+2020/06/12 18:17:07 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:07 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:07 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:07 task: <nil>
+2020/06/12 18:17:07 no task to run, exist
+2020/06/12 18:17:07 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:07 task: <nil>
+2020/06/12 18:17:07 no task to run, exist
+2020/06/12 18:17:08 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:08 task: <nil>
+2020/06/12 18:17:08 no task to run, exist
+2020/06/12 18:17:08 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:08 task: <nil>
+2020/06/12 18:17:08 no task to run, exist
+2020/06/12 18:17:08 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:08 task: <nil>
+2020/06/12 18:17:08 no task to run, exist
+2020/06/12 18:17:09 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:09 task: <nil>
+2020/06/12 18:17:09 no task to run, exist
+2020/06/12 18:17:09 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:09 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:09 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:09 task: <nil>
+2020/06/12 18:17:09 no task to run, exist
+2020/06/12 18:17:09 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:09 task: <nil>
+2020/06/12 18:17:09 no task to run, exist
+2020/06/12 18:17:10 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:10 task: <nil>
+2020/06/12 18:17:10 no task to run, exist
+2020/06/12 18:17:10 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:10 task: <nil>
+2020/06/12 18:17:10 no task to run, exist
+2020/06/12 18:17:10 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:10 task: <nil>
+2020/06/12 18:17:10 no task to run, exist
+2020/06/12 18:17:11 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:11 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:11 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:11 task: <nil>
+2020/06/12 18:17:11 no task to run, exist
+2020/06/12 18:17:11 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:11 task: <nil>
+2020/06/12 18:17:11 no task to run, exist
+2020/06/12 18:17:11 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:11 task: <nil>
+2020/06/12 18:17:11 no task to run, exist
+2020/06/12 18:17:12 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:12 task: <nil>
+2020/06/12 18:17:12 no task to run, exist
+2020/06/12 18:17:12 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:12 task: <nil>
+2020/06/12 18:17:12 no task to run, exist
+2020/06/12 18:17:12 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:12 task: <nil>
+2020/06/12 18:17:12 no task to run, exist
+2020/06/12 18:17:13 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:13 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:13 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:13 task: <nil>
+2020/06/12 18:17:13 no task to run, exist
+2020/06/12 18:17:13 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:13 task: <nil>
+2020/06/12 18:17:13 no task to run, exist
+2020/06/12 18:17:13 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:13 task: <nil>
+2020/06/12 18:17:13 no task to run, exist
+2020/06/12 18:17:14 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:14 task: <nil>
+2020/06/12 18:17:14 no task to run, exist
+2020/06/12 18:17:14 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:14 task: <nil>
+2020/06/12 18:17:14 no task to run, exist
+2020/06/12 18:17:14 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:14 task: <nil>
+2020/06/12 18:17:14 no task to run, exist
+2020/06/12 18:17:15 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:15 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:15 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:15 task: <nil>
+2020/06/12 18:17:15 no task to run, exist
+2020/06/12 18:17:15 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:15 task: <nil>
+2020/06/12 18:17:15 no task to run, exist
+2020/06/12 18:17:15 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:15 task: <nil>
+2020/06/12 18:17:15 no task to run, exist
+2020/06/12 18:17:16 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:16 task: <nil>
+2020/06/12 18:17:16 no task to run, exist
+2020/06/12 18:17:17 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:17 task: <nil>
+2020/06/12 18:17:17 no task to run, exist
+2020/06/12 18:17:17 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:17 task: <nil>
+2020/06/12 18:17:17 no task to run, exist
+2020/06/12 18:17:17 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:17 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:17 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:17 task: <nil>
+2020/06/12 18:17:17 no task to run, exist
+2020/06/12 18:17:18 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:18 task: <nil>
+2020/06/12 18:17:18 no task to run, exist
+2020/06/12 18:17:18 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:18 task: <nil>
+2020/06/12 18:17:18 no task to run, exist
+2020/06/12 18:17:18 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:18 task: <nil>
+2020/06/12 18:17:18 no task to run, exist
+2020/06/12 18:17:19 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:19 task: <nil>
+2020/06/12 18:17:19 no task to run, exist
+2020/06/12 18:17:19 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:19 task: <nil>
+2020/06/12 18:17:19 no task to run, exist
+2020/06/12 18:17:19 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:19 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:19 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:19 task: <nil>
+2020/06/12 18:17:19 no task to run, exist
+2020/06/12 18:17:20 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:20 task: <nil>
+2020/06/12 18:17:20 no task to run, exist
+2020/06/12 18:17:20 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:20 task: <nil>
+2020/06/12 18:17:20 no task to run, exist
+2020/06/12 18:17:20 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:20 task: <nil>
+2020/06/12 18:17:20 no task to run, exist
+2020/06/12 18:17:21 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:21 task: <nil>
+2020/06/12 18:17:21 no task to run, exist
+2020/06/12 18:17:21 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:21 task: <nil>
+2020/06/12 18:17:21 no task to run, exist
+2020/06/12 18:17:21 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:21 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:22 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:22 task: <nil>
+2020/06/12 18:17:22 no task to run, exist
+2020/06/12 18:17:22 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:22 task: <nil>
+2020/06/12 18:17:22 no task to run, exist
+2020/06/12 18:17:22 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:22 task: <nil>
+2020/06/12 18:17:22 no task to run, exist
+2020/06/12 18:17:23 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:23 task: <nil>
+2020/06/12 18:17:23 no task to run, exist
+2020/06/12 18:17:23 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:23 task: <nil>
+2020/06/12 18:17:23 no task to run, exist
+2020/06/12 18:17:23 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:23 task: <nil>
+2020/06/12 18:17:23 no task to run, exist
+2020/06/12 18:17:23 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:23 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:24 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:24 task: <nil>
+2020/06/12 18:17:24 no task to run, exist
+2020/06/12 18:17:24 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:24 task: <nil>
+2020/06/12 18:17:24 no task to run, exist
+2020/06/12 18:17:24 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:24 task: <nil>
+2020/06/12 18:17:24 no task to run, exist
+2020/06/12 18:17:25 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:25 task: <nil>
+2020/06/12 18:17:25 no task to run, exist
+2020/06/12 18:17:25 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:25 task: <nil>
+2020/06/12 18:17:25 no task to run, exist
+2020/06/12 18:17:25 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:25 task: <nil>
+2020/06/12 18:17:25 no task to run, exist
+2020/06/12 18:17:25 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} running
+2020/06/12 18:17:25 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:26 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:26 task: <nil>
+2020/06/12 18:17:26 no task to run, exist
+2020/06/12 18:17:26 worker-5 registerd
+2020/06/12 18:17:26 worker-10 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:26 task: <nil>
+2020/06/12 18:17:26 no task to run, exist
+2020/06/12 18:17:26 task: <nil>
+2020/06/12 18:17:26 no task to run, exist
+Set task:10 state:4
+2020/06/12 18:17:27 worker-1 registerd
+2020/06/12 18:17:27 task:&{WorkerID:6 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:4 BeatTime:2020-06-12 18:17:07.467014 +0800 CST m=+80.533973615} retry
+2020/06/12 18:17:27 task: &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:17:27.201802 +0800 CST}
+working on &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:17:27.201802 +0800 CST}
+Set task:10 state:2
+2020/06/12 18:17:27 worker-3 registerd
+2020/06/12 18:17:27 worker-2 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:27 task: <nil>
+2020/06/12 18:17:27 no task to run, exist
+2020/06/12 18:17:27 task: <nil>
+2020/06/12 18:17:27 no task to run, exist
+2020/06/12 18:17:27 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:27 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:28 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:28 task: <nil>
+2020/06/12 18:17:28 no task to run, exist
+2020/06/12 18:17:28 worker-6 registerd
+2020/06/12 18:17:28 worker-5 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:28 task: <nil>
+2020/06/12 18:17:28 no task to run, exist
+2020/06/12 18:17:28 task: <nil>
+2020/06/12 18:17:28 no task to run, exist
+2020/06/12 18:17:29 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:29 task: <nil>
+2020/06/12 18:17:29 no task to run, exist
+2020/06/12 18:17:29 worker-10 registerd
+2020/06/12 18:17:29 worker-2 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:29 task: <nil>
+2020/06/12 18:17:29 no task to run, exist
+2020/06/12 18:17:29 task: <nil>
+2020/06/12 18:17:29 no task to run, exist
+2020/06/12 18:17:29 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:29 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:30 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:30 task: <nil>
+2020/06/12 18:17:30 no task to run, exist
+2020/06/12 18:17:30 worker-3 registerd
+2020/06/12 18:17:30 worker-5 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:30 task: <nil>
+2020/06/12 18:17:30 no task to run, exist
+2020/06/12 18:17:30 task: <nil>
+2020/06/12 18:17:30 no task to run, exist
+2020/06/12 18:17:31 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:31 task: <nil>
+2020/06/12 18:17:31 no task to run, exist
+2020/06/12 18:17:31 worker-6 registerd
+2020/06/12 18:17:31 worker-10 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:31 task: <nil>
+2020/06/12 18:17:31 no task to run, exist
+2020/06/12 18:17:31 task: <nil>
+2020/06/12 18:17:31 no task to run, exist
+2020/06/12 18:17:31 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:31 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:32 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:32 task: <nil>
+2020/06/12 18:17:32 no task to run, exist
+2020/06/12 18:17:32 worker-2 registerd
+2020/06/12 18:17:32 worker-5 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:32 task: <nil>
+2020/06/12 18:17:32 no task to run, exist
+2020/06/12 18:17:32 task: <nil>
+2020/06/12 18:17:32 no task to run, exist
+2020/06/12 18:17:33 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:33 task: <nil>
+2020/06/12 18:17:33 no task to run, exist
+2020/06/12 18:17:33 worker-3 registerd
+2020/06/12 18:17:33 worker-6 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:33 task: <nil>
+2020/06/12 18:17:33 task: <nil>
+2020/06/12 18:17:33 no task to run, exist
+2020/06/12 18:17:33 no task to run, exist
+2020/06/12 18:17:33 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:33 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:34 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:34 task: <nil>
+2020/06/12 18:17:34 no task to run, exist
+2020/06/12 18:17:34 worker-10 registerd
+2020/06/12 18:17:34 worker-2 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:34 task: <nil>
+2020/06/12 18:17:34 task: <nil>
+2020/06/12 18:17:34 no task to run, exist
+2020/06/12 18:17:34 no task to run, exist
+2020/06/12 18:17:35 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:35 task: <nil>
+2020/06/12 18:17:35 no task to run, exist
+2020/06/12 18:17:35 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:35 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:35 worker-5 registerd
+2020/06/12 18:17:35 worker-6 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:35 task: <nil>
+2020/06/12 18:17:35 no task to run, exist
+2020/06/12 18:17:35 task: <nil>
+2020/06/12 18:17:35 no task to run, exist
+2020/06/12 18:17:36 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:36 task: <nil>
+2020/06/12 18:17:36 no task to run, exist
+2020/06/12 18:17:36 worker-2 registerd
+2020/06/12 18:17:36 worker-3 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:36 task: <nil>
+2020/06/12 18:17:36 no task to run, exist
+2020/06/12 18:17:36 task: <nil>
+2020/06/12 18:17:36 no task to run, exist
+2020/06/12 18:17:37 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:37 task: <nil>
+2020/06/12 18:17:37 no task to run, exist
+2020/06/12 18:17:37 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:37 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:37 worker-10 registerd
+2020/06/12 18:17:37 worker-5 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:37 task: <nil>
+2020/06/12 18:17:37 no task to run, exist
+2020/06/12 18:17:37 task: <nil>
+2020/06/12 18:17:37 no task to run, exist
+2020/06/12 18:17:38 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:38 task: <nil>
+2020/06/12 18:17:38 no task to run, exist
+2020/06/12 18:17:38 worker-1 registerd
+2020/06/12 18:17:38 worker-3 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:38 task: <nil>
+2020/06/12 18:17:38 no task to run, exist
+2020/06/12 18:17:38 task: <nil>
+2020/06/12 18:17:38 no task to run, exist
+2020/06/12 18:17:39 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:39 task: <nil>
+2020/06/12 18:17:39 no task to run, exist
+2020/06/12 18:17:39 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:39 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:39 worker-10 registerd
+2020/06/12 18:17:39 worker-5 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:39 task: <nil>
+2020/06/12 18:17:39 no task to run, exist
+2020/06/12 18:17:39 task: <nil>
+2020/06/12 18:17:39 no task to run, exist
+2020/06/12 18:17:40 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:40 task: <nil>
+2020/06/12 18:17:40 no task to run, exist
+2020/06/12 18:17:40 worker-1 registerd
+2020/06/12 18:17:40 worker-3 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:40 task: <nil>
+2020/06/12 18:17:40 task: <nil>
+2020/06/12 18:17:40 no task to run, exist
+2020/06/12 18:17:40 no task to run, exist
+2020/06/12 18:17:41 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:41 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:41 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:41 task: <nil>
+2020/06/12 18:17:41 no task to run, exist
+2020/06/12 18:17:41 worker-5 registerd
+2020/06/12 18:17:41 worker-10 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:41 task: <nil>
+2020/06/12 18:17:41 no task to run, exist
+2020/06/12 18:17:41 task: <nil>
+2020/06/12 18:17:41 no task to run, exist
+2020/06/12 18:17:42 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:42 task: <nil>
+2020/06/12 18:17:42 no task to run, exist
+2020/06/12 18:17:42 worker-3 registerd
+2020/06/12 18:17:42 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:42 task: <nil>
+2020/06/12 18:17:42 no task to run, exist
+all tasks sent already
+2020/06/12 18:17:42 task: <nil>
+2020/06/12 18:17:42 no task to run, exist
+2020/06/12 18:17:43 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:43 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:43 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:43 task: <nil>
+2020/06/12 18:17:43 no task to run, exist
+2020/06/12 18:17:44 worker-10 registerd
+2020/06/12 18:17:44 worker-5 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:44 task: <nil>
+2020/06/12 18:17:44 no task to run, exist
+2020/06/12 18:17:44 task: <nil>
+2020/06/12 18:17:44 no task to run, exist
+2020/06/12 18:17:44 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:44 task: <nil>
+2020/06/12 18:17:44 no task to run, exist
+2020/06/12 18:17:45 worker-1 registerd
+2020/06/12 18:17:45 worker-3 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:45 task: <nil>
+2020/06/12 18:17:45 no task to run, exist
+2020/06/12 18:17:45 task: <nil>
+2020/06/12 18:17:45 no task to run, exist
+2020/06/12 18:17:45 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} running
+2020/06/12 18:17:45 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:45 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:45 task: <nil>
+2020/06/12 18:17:45 no task to run, exist
+2020/06/12 18:17:46 worker-5 registerd
+2020/06/12 18:17:46 worker-10 registerd
+all tasks sent already
+all tasks sent already
+2020/06/12 18:17:46 task: <nil>
+2020/06/12 18:17:46 no task to run, exist
+2020/06/12 18:17:46 task: <nil>
+2020/06/12 18:17:46 no task to run, exist
+2020/06/12 18:17:46 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:46 task: <nil>
+2020/06/12 18:17:46 no task to run, exist
+Set task:10 state:4
+2020/06/12 18:17:47 worker-1 registerd
+2020/06/12 18:17:47 worker-3 registerd
+2020/06/12 18:17:47 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:4 BeatTime:2020-06-12 18:17:27.201802 +0800 CST m=+100.268470034} retry
+all tasks sent already
+2020/06/12 18:17:47 task: <nil>
+2020/06/12 18:17:47 no task to run, exist
+2020/06/12 18:17:47 task: &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:17:47.148588 +0800 CST}
+working on &{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:1 BeatTime:2020-06-12 18:17:47.148588 +0800 CST}
+Set task:10 state:2
+2020/06/12 18:17:47 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:47.148588 +0800 CST m=+120.214960852} running
+2020/06/12 18:17:47 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:47 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:47 task: <nil>
+2020/06/12 18:17:47 no task to run, exist
+2020/06/12 18:17:48 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:48 task: <nil>
+2020/06/12 18:17:48 no task to run, exist
+2020/06/12 18:17:49 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:49 task: <nil>
+2020/06/12 18:17:49 no task to run, exist
+2020/06/12 18:17:49 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:49 task: <nil>
+2020/06/12 18:17:49 no task to run, exist
+2020/06/12 18:17:49 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:47.148588 +0800 CST m=+120.214960852} running
+2020/06/12 18:17:49 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:50 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:50 task: <nil>
+2020/06/12 18:17:50 no task to run, exist
+2020/06/12 18:17:50 Heartbeat: worker-1 task-10 time-2020-06-12 18:17:50.153321 +0800 CST m=+123.219650157
+2020/06/12 18:17:50 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:50 task: <nil>
+2020/06/12 18:17:50 no task to run, exist
+2020/06/12 18:17:51 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:51 task: <nil>
+2020/06/12 18:17:51 no task to run, exist
+2020/06/12 18:17:51 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:51 task: <nil>
+2020/06/12 18:17:51 no task to run, exist
+2020/06/12 18:17:51 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:50.153321 +0800 CST m=+123.219650157} running
+2020/06/12 18:17:51 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:52 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:52 task: <nil>
+2020/06/12 18:17:52 no task to run, exist
+2020/06/12 18:17:52 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:52 task: <nil>
+2020/06/12 18:17:52 no task to run, exist
+2020/06/12 18:17:53 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:53 task: <nil>
+2020/06/12 18:17:53 no task to run, exist
+2020/06/12 18:17:53 Heartbeat: worker-1 task-10 time-2020-06-12 18:17:53.159487 +0800 CST m=+126.225771591
+2020/06/12 18:17:53 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:53 task: <nil>
+2020/06/12 18:17:53 no task to run, exist
+2020/06/12 18:17:53 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:53.159487 +0800 CST m=+126.225771591} running
+2020/06/12 18:17:53 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:54 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:54 task: <nil>
+2020/06/12 18:17:54 no task to run, exist
+2020/06/12 18:17:54 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:54 task: <nil>
+2020/06/12 18:17:54 no task to run, exist
+2020/06/12 18:17:55 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:55 task: <nil>
+2020/06/12 18:17:55 no task to run, exist
+2020/06/12 18:17:55 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:55 task: <nil>
+2020/06/12 18:17:55 no task to run, exist
+2020/06/12 18:17:55 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:53.159487 +0800 CST m=+126.225771591} running
+2020/06/12 18:17:55 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:56 Heartbeat: worker-1 task-10 time-2020-06-12 18:17:56.164925 +0800 CST m=+129.231164849
+2020/06/12 18:17:56 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:56 task: <nil>
+2020/06/12 18:17:56 no task to run, exist
+2020/06/12 18:17:56 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:56 task: <nil>
+2020/06/12 18:17:56 no task to run, exist
+2020/06/12 18:17:57 worker-2 registerd
+all tasks sent already
+2020/06/12 18:17:57 task: <nil>
+2020/06/12 18:17:57 no task to run, exist
+2020/06/12 18:17:57 worker-3 registerd
+all tasks sent already
+2020/06/12 18:17:57 task: <nil>
+2020/06/12 18:17:57 no task to run, exist
+2020/06/12 18:17:57 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:56.164925 +0800 CST m=+129.231164849} running
+2020/06/12 18:17:57 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:17:58 worker-6 registerd
+all tasks sent already
+2020/06/12 18:17:58 task: <nil>
+2020/06/12 18:17:58 no task to run, exist
+2020/06/12 18:17:58 worker-5 registerd
+all tasks sent already
+2020/06/12 18:17:58 task: <nil>
+2020/06/12 18:17:58 no task to run, exist
+2020/06/12 18:17:59 Heartbeat: worker-1 task-10 time-2020-06-12 18:17:59.170549 +0800 CST m=+132.236745086
+2020/06/12 18:17:59 worker-10 registerd
+all tasks sent already
+2020/06/12 18:17:59 task: <nil>
+2020/06/12 18:17:59 no task to run, exist
+2020/06/12 18:17:59 worker-1 registerd
+all tasks sent already
+2020/06/12 18:17:59 task: <nil>
+2020/06/12 18:17:59 no task to run, exist
+2020/06/12 18:17:59 task:&{WorkerID:1 TaskID:10 NReduce:3 Phase:1 Filename:mr-*-2 State:2 BeatTime:2020-06-12 18:17:59.170549 +0800 CST m=+132.236745086} running
+2020/06/12 18:17:59 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+Set task:10 state:3
+all tasks sent already
+2020/06/12 18:18:00 task: <nil>
+2020/06/12 18:18:00 no task to run, exist
+2020/06/12 18:18:00 worker-2 registerd
+all tasks sent already
+2020/06/12 18:18:00 task: <nil>
+2020/06/12 18:18:00 no task to run, exist
+2020/06/12 18:18:00 worker-3 registerd
+all tasks sent already
+2020/06/12 18:18:00 task: <nil>
+2020/06/12 18:18:00 no task to run, exist
+2020/06/12 18:18:01 worker-6 registerd
+all tasks sent already
+2020/06/12 18:18:01 task: <nil>
+2020/06/12 18:18:01 no task to run, exist
+2020/06/12 18:18:01 worker-5 registerd
+all tasks sent already
+2020/06/12 18:18:01 task: <nil>
+2020/06/12 18:18:01 no task to run, exist
+2020/06/12 18:18:01 worker-10 registerd
+all tasks sent already
+2020/06/12 18:18:01 task: <nil>
+2020/06/12 18:18:01 no task to run, exist
+2020/06/12 18:18:01 tasks: &{mu:{state:0 sema:0} read:{v:{m:map[1:0xc0000b8688 2:0xc00026e000 3:0xc000010478 4:0xc000010480 5:0xc0000b8dd0 6:0xc0002b4250 7:0xc0002b45c0 8:0xc000292250 9:0xc0002b4868 10:0xc0000b80a8 11:0xc000126010] amended:false}} dirty:map[] misses:0}
+2020/06/12 18:18:01 all reduce task done
+2020/06/12 18:18:02 worker-1 registerd
+all tasks sent already
+2020/06/12 18:18:02 task: <nil>
+2020/06/12 18:18:02 no task to run, exist
+2020/06/12 18:18:02 worker-2 registerd
+all tasks sent already
+2020/06/12 18:18:02 task: <nil>
+2020/06/12 18:18:02 no task to run, exist
+2020/06/12 18:18:02 worker-3 registerd
+all tasks sent already
+2020/06/12 18:18:02 task: <nil>
+2020/06/12 18:18:02 no task to run, exist
+--- crash test: PASS
+*** PASSED ALL TESTS
