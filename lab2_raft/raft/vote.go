@@ -53,6 +53,7 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 
 	// All Servers rule: 大于本节点term，则重置自己为普通Follower，并term提升, 后面正常投票
 	// If RPC request or response contains term T > currentTerm: set currentTerm = T, convert to follower (§5.1)
+	// Candidates Rule 3: If AppendEntries RPC received from new leader: convert to follower
 	if args.Term > rf.term {
 		rf.changeRole(Follower)
 		rf.term = args.Term
@@ -195,6 +196,7 @@ func (rf *Raft) startElection() bool {
 	wg.Wait()
 	DPrintf("election done. voteCount:%d %d", voteCount, len(rf.peers))
 	// 当选成功, 结束选举
+	// Candidates Rule 2: If votes received from majority of servers: become leader
 	if voteCount > int32(len(rf.peers)/2) {
 		rf.changeRole(Leader)
 		return true

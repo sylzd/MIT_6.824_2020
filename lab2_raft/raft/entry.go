@@ -68,6 +68,9 @@ func (rf *Raft) SendHeartbeat(server int) {
 
 	DPrintf("leader:%d send AppendEntries to rf:%d", rf.me, server)
 	// 获取参数
+	// Leader Rule 3: If last log index ≥ nextIndex for a follower: send AppendEntries RPC with log entries starting at nextIndex
+	//	// • If successful: update nextIndex and matchIndex for follower (§5.3)
+	//	// • If AppendEntries fails because of log inconsistency: decrement nextIndex and retry (§5.3) TODO: 这里处理稍微有点不同，直接将nextIndex回退为follwer的日志末尾，暂时没发现问题
 	prevLogIndex, prevLogTerm, logs := rf.getAppendLogs(server)
 	args := AppendEntriesArgs{
 		Term:         rf.term,
@@ -103,7 +106,7 @@ func (rf *Raft) SendHeartbeat(server int) {
 	if len(logs) != 0 && reply.Success {
 		if args.Entries != nil && args.Entries[0].Term == rf.term {
 			// 只 commit和apply 自己 term 的 index
-			rf.commitApplyLog()
+			rf.commitLog()
 		}
 	}
 }
@@ -131,9 +134,10 @@ func (rf *Raft) getAppendLogs(serverID int) (prevLogIndex, prevLogTerm int, res 
 	return
 }
 
-func (rf *Raft) commitApplyLog() {
+func (rf *Raft) commitLog() {
 	//DPrintf("match:%+v lastCommited:%+v", rf.matchIndex, rf.commitIndex)
 	// 按日志顺序逐一判断提交
+	// Leader Rule 4: If there exists an N such that N > commitIndex, a majority of matchIndex[i] ≥ N, and log[N].term == currentTerm: set commitIndex = N (§5.3, §5.4).
 	for i := rf.commitIndex + 1; i <= len(rf.logEntries)-1; i++ {
 		agreeCount := 0
 		for _, m := range rf.matchIndex {

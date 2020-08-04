@@ -150,6 +150,7 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 		return lastIndex, term, isLeader
 	}
 	// 2. leader 收到client发来的命令，发起一次日志共识过程,并马上返回,不用管结果
+	// Leader Rule 2: If command received from client: append entry to local log, respond after entry applied to state machine (§5.3)
 	index = lastIndex + 1
 	DPrintf("rf:%d send index:%d command:%+v, commited index: %d", rf.me, index, command, rf.commitIndex)
 	rf.logEntries = append(rf.logEntries, LogEntry{
@@ -268,11 +269,17 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	}()
 
 	// leader/follower/candidate: ElectionTimetout触发选举
+	// Candidates Rule 4: If election timeout elapses: start new election
 	go func() {
 		for {
 			select {
 			case <-rf.electionTimer.C:
 				DPrintf("raft:%+v electiontimer timeout:%+v", rf.me, rf.electionTimer)
+				//Candidates Rule 1: • On conversion to candidate, start election:
+				//	//• Increment currentTerm
+				//	//• Vote for self
+				//	//• Reset election timer
+				//	//• Send RequestVote RPCs to all other servers
 				succ := rf.startElection()
 				if succ {
 					//选举成功马上发一次心跳，结束选举
@@ -293,6 +300,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	}()
 
 	// leader: 发送心跳/日志
+	// Leader Rule 1: Upon election: send initial empty AppendEntries RPCs (heartbeat) to each server; repeat during idle periods to prevent election timeouts (§5.2)
 	go func() {
 		for {
 			time.Sleep(HeartbeatInterval)
