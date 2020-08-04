@@ -8,7 +8,14 @@ import (
 )
 
 //
-// example RequestVote RPC arguments structure.
+// this is an outline of the API that raft must expose to
+// the service (or tester). see comments below for
+// each of these functions for more details.
+//
+// rf = Make(...)
+//   create a new Raft server.
+// rf.Start(command interface{}) (index, term, isleader)
+//   start agreement on a new log entry.
 // field names must start with capital letters!
 //
 type RequestVoteArgs struct {
@@ -36,49 +43,48 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
 	resetTimer(rf.electionTimer, ElectionTimeout)
 	rf.mu.Lock()
-	DPrintf("rf:%d get RequestVote(%+v) lock", rf.me, args)
+	DPrintf("rf:%d get RequestVote(%+v) my log:%+v", rf.me, args, rf.logEntries)
 	defer rf.mu.Unlock()
 
 	reply.Term = rf.term
 	reply.VoteGranted = false
 
-	// 0. 所有server响应RPC必备: 大于本节点term，则重置自己为普通Follower，并term提升
+	// 0. all server rule: 大于本节点term，则重置自己为普通Follower，并term提升, 后面正常投票
 	if args.Term > rf.term {
 		rf.changeRole(Follower)
 		rf.term = args.Term
 		rf.votedFor = -1
 	}
 
-	// 1. 候选人term太小，不投
+	// 1. 选举限制：候选人term太小，不投
 	if args.Term < rf.term {
+		DPrintf("candidate:%d term too old", args.CandidateId)
 		return
 	}
-	//lastLogTerm, lastLogIndex := rf.lastLogTermIndex()
-	//// index太小，不投
-	//if args.LastLogTerm == lastLogTerm && args.LastLogIndex < lastLogIndex {
-	//	return
-	//}
-	// 2. 我是leader，不投
+	// 2. 选举限制：候选人日志较旧（term较小或term相同的情况下，候选人index太小）·，不投
+	lastLogTerm, lastLogIndex := rf.lastLogTermIndex()
+	if args.LastLogTerm < lastLogTerm || (args.LastLogTerm == lastLogTerm && args.LastLogIndex < lastLogIndex) {
+		DPrintf("candidate:%d log too old", args.CandidateId)
+		return
+	}
+	// 3. 我是leader，不投
 	if rf.role == Leader {
+		DPrintf("i am leader", args.CandidateId)
 		return
 	}
+
 	//// 已投给其他节点，不投
-	//if rf.votedFor != -1 && rf.voteeFor != args.CandidateId {
+	//if rf.votedFor != -1 && rf.voteFor != args.CandidateId {
 	//	return
 	//}
 
-	// 2. 正常投票(本节点没投过且没有这个rpc的发送者节点的log新)
-	DPrintf("\nargs: %+v\nraft:%+v", args, rf)
+	// 2. 正常投票
 	if rf.votedFor == -1 || rf.votedFor == args.CandidateId {
-		// TODO: 这里是用lastLogTerm还是直接用Term?
-		if args.Term > rf.term ||
-			(args.Term == rf.term && args.LastLogIndex >= rf.commitIndex) {
-			DPrintf("%d vote for %d", rf.me, args.CandidateId)
-			rf.term = args.Term
-			rf.votedFor = args.CandidateId
-			reply.VoteGranted = true
-			rf.changeRole(Follower)
-		}
+		DPrintf("%d vote for %d", rf.me, args.CandidateId)
+		rf.term = args.Term
+		rf.votedFor = args.CandidateId
+		reply.VoteGranted = true
+		rf.changeRole(Follower)
 	}
 
 }

@@ -1,22 +1,5 @@
 package raft
 
-//
-// this is an outline of the API that raft must expose to
-// the service (or tester). see comments below for
-// each of these functions for more details.
-//
-// rf = Make(...)
-//   create a new Raft server.
-// rf.Start(command interface{}) (index, term, isleader)
-//   start agreement on a new log entry
-// rf.GetState() (term, isLeader)
-//   ask a Raft for its current term, and whether it thinks it is leader
-// ApplyMsg
-//   each time a new entry is committed to the log, each Raft peer
-//   should send an ApplyMsg to the service (or tester)
-//   in the same server.
-//
-
 import (
 	"fmt"
 	"sync"
@@ -25,6 +8,16 @@ import (
 
 	"../labrpc"
 )
+
+//
+// example RequestVote RPC arguments structure.
+// fisLeader)
+//   ask a Raft for its current term, and whether it thinks it is leader
+// ApplyMsg
+//   each time a new entry is committed to the log, each Raft peer
+//   should send an ApplyMsg to the service (or tester)
+//   in the same server.
+//
 
 // import "bytes"
 // import "../labgob"
@@ -57,8 +50,8 @@ const (
 )
 
 const (
-	ElectionTimeout   = time.Millisecond * 400 // 选举
-	RPCTimeout        = time.Millisecond * 100 // 心跳/日志追加 的RPC超时, 远小于ElectionTimeout, 不然会发生频繁选举
+	ElectionTimeout   = time.Millisecond * 500 // 选举
+	RPCTimeout        = time.Millisecond * 200 // 心跳/日志追加 的RPC超时, 远小于ElectionTimeout, 不然会发生频繁选举
 	HeartbeatInterval = time.Millisecond * 50  // 也可以叫HeartbeatTimeout
 )
 
@@ -146,10 +139,10 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 
 	term, isLeader = rf.GetState() // with lock
 	rf.mu.Lock()
-	DPrintf("Start(%+v) lock", command)
+	//DPrintf("Start(%+v) lock", command)
 	defer rf.mu.Unlock()
 	_, lastIndex := rf.lastLogTermIndex()
-	DPrintf("rf:%d isleader:%+v get command: %d", rf.me, isLeader, command)
+	//DPrintf("rf:%d isleader:%+v get command: %d", rf.me, isLeader, command)
 
 	// Your code here (2B).
 	// 1. 不是leader就别管闲事了
@@ -158,7 +151,7 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	}
 	// 2. leader 收到client发来的命令，发起一次日志共识过程,并马上返回,不用管结果
 	index = lastIndex + 1
-	DPrintf("send index:%d", index)
+	DPrintf("rf:%d send index:%d command:%+v, commited index: %d", rf.me, index, command, rf.commitIndex)
 	rf.logEntries = append(rf.logEntries, LogEntry{
 		Term:    rf.term,
 		Command: command,
@@ -238,16 +231,37 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	// votedFor 初始化为-1，每一轮选举后都重置为-1
 	rf.votedFor = -1
 	rf.role = Follower
-	rf.logEntries = append(rf.logEntries, LogEntry{
-		Term: 0, Index: 0,
-	})
+	// 初始化1个空日志占位索引0
+	if len(rf.logEntries) == 0 {
+		rf.logEntries = append(rf.logEntries, LogEntry{
+			Term: 0, Index: 0,
+		})
+	}
 	// initialize from state persisted before a crash
 	rf.readPersist(persister.ReadRaftState())
 	// 初始化applyCh
 	rf.applyCh = applyCh
+	// 初始化nextIndex,matchIndex
+	rf.nextIndex = make([]int, len(rf.peers))
+	rf.matchIndex = make([]int, len(rf.peers))
 
 	rf.electionTimer = time.NewTimer(randTimeout(ElectionTimeout))
 
+	//go func() {
+	//	for {
+	//		time.Sleep(10 * time.Millisecond)
+	//		if rf.lastApplied < rf.commitIndex && rf.lastApplied < len(rf.logEntries)-1 {
+	//			fmt.Printf("raft:%d lastApplied:%d commitIndex:%d\n", rf.me, rf.lastApplied, rf.commitIndex)
+	//			rf.lastApplied++
+	//			msg := ApplyMsg{
+	//				CommandValid: true,
+	//				Command:      rf.logEntries[rf.lastApplied].Command,
+	//				CommandIndex: rf.lastApplied + 1,
+	//			}
+	//			rf.applyLog(msg)
+	//		}
+	//	}
+	//}()
 	// leader/follower/candidate: ElectionTimetout触发选举
 	go func() {
 		for {
@@ -255,11 +269,19 @@ func Make(peers []*labrpc.ClientEnd, me int,
 			case <-rf.electionTimer.C:
 				DPrintf("raft:%+v electiontimer timeout:%+v", rf.me, rf.electionTimer)
 				succ := rf.startElection()
-				// 选举成功马上发一次心跳，结束选举
 				if succ {
-					for i, _ := range rf.peers {
-						rf.SendHeartbeat(i)
+					//选举成功马上发一次心跳，结束选举
+					_, isLeader := rf.GetState() // with lock
+					if isLeader {
+						for i, _ := range rf.peers {
+							rf.SendHeartbeat(i)
+						}
 					}
+				} else {
+					// 选举失败，重置timer，进行下一场选举
+					rf.mu.Lock()
+					rf.changeRole(Follower)
+					rf.mu.Unlock()
 				}
 			}
 		}
@@ -269,12 +291,22 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	go func() {
 		for {
 			time.Sleep(HeartbeatInterval)
-			for i, _ := range rf.peers {
-				rf.SendHeartbeat(i)
+			_, isLeader := rf.GetState() // with lock
+			if isLeader {
+				for i, _ := range rf.peers {
+					rf.SendHeartbeat(i)
+				}
 			}
 		}
 	}()
 
+	// lzd 2B debug: 查看日志状态
+	go func() {
+		for {
+			time.Sleep(time.Second)
+			DDPrintf("raft: %d, committed:%d logs: %+v", rf.me, rf.commitIndex, rf.logEntries)
+		}
+	}()
 	//lzd 2A debug: 以下这段代码可以是TestInitialElection2A需要达到的结果，但实际上需要由选举完成
 	//rf.term = 1
 	//rf.role = Follower
@@ -289,13 +321,14 @@ func Make(peers []*labrpc.ClientEnd, me int,
 
 func (rf *Raft) changeRole(role Role) error {
 	rf.role = role
+	resetTimer(rf.electionTimer, ElectionTimeout)
 	switch role {
 	case Follower:
 	case Candidate:
 		rf.term++
 		rf.votedFor = rf.me
 	case Leader:
-		DPrintf("raft: %d become new leader term:%+v", rf.me, rf.term)
+		DPrintf("raft: %d become new leader term:%+v logEntries:%+v", rf.me, rf.term, rf.logEntries)
 		rf.votedFor = -1
 		rf.nextIndex = make([]int, len(rf.peers))
 		_, lastLogIndex := rf.lastLogTermIndex()
@@ -303,7 +336,7 @@ func (rf *Raft) changeRole(role Role) error {
 		for i := 0; i < len(rf.peers); i++ {
 			rf.nextIndex[i] = lastLogIndex + 1
 		}
-		// 初始化自己的matchIndex点位
+		// 初始化自己的matchIndex点位(不知道follower的提交情况)
 		rf.matchIndex = make([]int, len(rf.peers))
 		rf.matchIndex[rf.me] = lastLogIndex
 	default:

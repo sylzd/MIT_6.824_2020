@@ -8,10 +8,18 @@ import (
 )
 
 // Debugging
-const Debug = 1
+const Debug = 0
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
-	if Debug > 0 {
+	if Debug > 1 {
+		//log.Printf(format, a...)
+		pretty.Logf(format+"\n", a...)
+	}
+	return
+}
+
+func DDPrintf(format string, a ...interface{}) (n int, err error) {
+	if Debug > 3 {
 		//log.Printf(format, a...)
 		pretty.Logf(format+"\n", a...)
 	}

@@ -173,7 +173,7 @@ func (cfg *config) start1(i int) {
 	applyCh := make(chan ApplyMsg)
 	go func() {
 		for m := range applyCh {
-			DPrintf("read applyCh")
+			//DPrintf("read applyCh")
 			err_msg := ""
 			if m.CommandValid == false {
 				// ignore other types of ApplyMsg
@@ -193,7 +193,6 @@ func (cfg *config) start1(i int) {
 					cfg.maxIndex = m.CommandIndex
 				}
 				cfg.mu.Unlock()
-				DPrintf("cfg.logs:%+v", cfg.logs)
 
 				if m.CommandIndex > 1 && prevok == false {
 					err_msg = fmt.Sprintf("server %v apply out of order %v", i, m.CommandIndex)
@@ -202,7 +201,6 @@ func (cfg *config) start1(i int) {
 
 			if err_msg != "" {
 				log.Fatalf("apply error: %v\n", err_msg)
-				cfg.applyErr[i] = err_msg
 				// keep reading after error so that Raft doesn't block
 				// holding locks...
 			}
@@ -263,7 +261,7 @@ func (cfg *config) connect(i int) {
 
 // detach server i from the net.
 func (cfg *config) disconnect(i int) {
-	//fmt.Printf("disconnect(%d)\n", i)
+	DPrintf("disconnect(%d)\n", i)
 
 	cfg.connected[i] = false
 
