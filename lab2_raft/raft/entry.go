@@ -87,16 +87,19 @@ func (rf *Raft) SendHeartbeat(server int) {
 		return
 	}
 	// DPrintf("leader:%+v nextidxs:%+v", rf.me, rf.nextIndex)
-	// 处理不一致：减小nextIndex并重试
+	// 处理follwer不一致：nextIndex退1格并重试
 	if reply.NextIndex == -1 {
 		rf.nextIndex[server]--
 		rf.matchIndex[server] = rf.nextIndex[server] - 1
-		// return
 	}
-
-	if len(logs) != 0 && reply.Success {
+	// 处理follower不一致： 直接修正nextIndex为正确值
+	if reply.NextIndex != 0 && reply.NextIndex != -1 {
 		rf.nextIndex[server] = reply.NextIndex
 		rf.matchIndex[server] = reply.NextIndex - 1
+	}
+
+	// 成功复制，则跑一次提交测试
+	if len(logs) != 0 && reply.Success {
 		if args.Entries != nil && args.Entries[0].Term == rf.term {
 			// 只 commit和apply 自己 term 的 index
 			rf.commitApplyLog()
@@ -156,12 +159,11 @@ func (rf *Raft) commitApplyLog() {
 func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply) {
 	DPrintf("rf:%d term:%d get leader:%d AppendEntries Args: %+v, my log: %+v commited:%d", rf.me, rf.term, args.LeaderId, args, rf.logEntries, rf.commitIndex)
 	rf.mu.Lock()
-	//DPrintf("AppendEntries(%+v)", args)
 	defer rf.mu.Unlock()
 	// 每次收到leader的rpc(心跳/日志)，都重置一下, 以免自己发起选举或下次选举
 	resetTimer(rf.electionTimer, ElectionTimeout)
 
-	// all server rule: 发现自己过期，则重置自己为普通Follower，并term提升, 防止有老follower没跟上时代
+	// 0. all server rule: 发现自己过期，则重置自己为普通Follower，并term提升, 防止有老follower没跟上时代
 	if rf.term < args.Term {
 		rf.term = args.Term
 		reply.Term = rf.term
@@ -171,7 +173,8 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		return
 	}
 
-	// 2. 收到老leader的请求，直接拒绝
+	// 1. 收到老leader的请求，直接拒绝
+	// Reply false if term < currentTerm (§5.1)
 	if args.Term < rf.term {
 		reply.Term = rf.term
 		reply.Success = false
@@ -179,7 +182,8 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		return
 	}
 
-	// 3.1 一致性检查(leader crash 会出现): (prevLogTerm, prevLogIndex）新日志前一条日志不匹配(index一样但term不一样),则leader[followerID].NextIndex回退一格，覆写冲突日志
+	// 2. 一致性检查(leader crash 会出现): (prevLogTerm, prevLogIndex）新日志前一条日志不匹配(index一样但term不一样),则leader[followerID].NextIndex回退一格，覆写冲突日志
+	// Reply false if log doesn’t contain an entry at prevLogIndex whose term matches prevLogTerm (§5.3)
 	if args.PrevLogIndex > 0 && args.PrevLogIndex <= len(rf.logEntries)-1 && rf.logEntries[args.PrevLogIndex].Term != args.PervLogTerm {
 		reply.Success = false
 		// 告诉leader，一致性检查没通过，删掉不匹配日志，将NextIndex-1
@@ -189,15 +193,17 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		return
 	}
 
-	// 3.2 一致性检查(leader crash 会出现)：follower日志缺失太多,则leader[followerID].NextIndex回退一格，直到follower日志末尾
+	// 3. 一致性检查(leader crash 会出现)：follower日志缺失太多,则leader[followerID].NextIndex回退一格，直到follower日志末尾
+	// Append any new entries not already in the log
 	if args.PrevLogIndex > len(rf.logEntries)-1 {
 		reply.Success = false
-		reply.NextIndex = -1
+		reply.NextIndex = len(rf.logEntries)
 		rf.changeRole(Follower)
 		return
 	}
 
 	// 3.3 一致性检查(leader crash 会出现)：follower历史日志与新的append日志冲突，则删掉冲突日志及之后的所有日志，且leader[followerID].NextIndex回退到剩余日志的末尾
+	// If an existing entry conflicts with a new one (same index but different terms), delete the existing entry and all that follow it (§5.3)
 	for _, entry := range args.Entries {
 		if entry.Index < len(rf.logEntries) && rf.logEntries[entry.Index].Term != entry.Term {
 			rf.logEntries = rf.logEntries[:entry.Index]
@@ -219,6 +225,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	reply.Success = true
 
 	// 5. 更新rf.commitIndex
+	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
 	if args.LeaderCommit > rf.commitIndex {
 		rf.commitIndex = args.LeaderCommit
 		if args.LeaderCommit > lastIndex {
