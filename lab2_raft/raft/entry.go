@@ -189,43 +189,39 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		// 告诉leader，一致性检查没通过，删掉不匹配日志，将NextIndex-1
 		rf.logEntries = rf.logEntries[:args.PrevLogIndex]
 		reply.NextIndex = args.PrevLogIndex
-		rf.changeRole(Follower)
 		return
 	}
 
-	// 3. 一致性检查(leader crash 会出现)：follower日志缺失太多,则leader[followerID].NextIndex回退一格，直到follower日志末尾
-	// Append any new entries not already in the log
-	if args.PrevLogIndex > len(rf.logEntries)-1 {
-		reply.Success = false
-		reply.NextIndex = len(rf.logEntries)
-		rf.changeRole(Follower)
-		return
-	}
-
-	// 3.3 一致性检查(leader crash 会出现)：follower历史日志与新的append日志冲突，则删掉冲突日志及之后的所有日志，且leader[followerID].NextIndex回退到剩余日志的末尾
+	// 3 一致性检查(leader crash 会出现)：follower历史日志与新的append日志冲突，则删掉冲突日志及之后的所有日志，且leader[followerID].NextIndex回退到剩余日志的末尾
 	// If an existing entry conflicts with a new one (same index but different terms), delete the existing entry and all that follow it (§5.3)
 	for _, entry := range args.Entries {
 		if entry.Index < len(rf.logEntries) && rf.logEntries[entry.Index].Term != entry.Term {
 			rf.logEntries = rf.logEntries[:entry.Index]
 			reply.Success = false
 			reply.NextIndex = entry.Index
-			//reply.NextIndex = -1
-			rf.changeRole(Follower)
 			return
 		}
 	}
 
-	// 4. 成功复制新日志/或收到心跳
+	// 4. 一致性检查(leader crash 会出现)：follower日志缺失太多,则leader[followerID].NextIndex回退到日志的末尾
+	// Append any new entries not already in the log
+	if args.PrevLogIndex > len(rf.logEntries)-1 {
+		reply.Success = false
+		reply.NextIndex = len(rf.logEntries)
+		return
+	}
+
+	// 5. 成功复制新日志后更新rf.commitIndex
+	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
+	// TODO: 较小概率出现过TestReJoin2B失败的情况，复现了再说
 	rf.logEntries = append(rf.logEntries, args.Entries...)
 	if len(args.Entries) != 0 {
 		DPrintf("rf follower: %d, log entries: %+v", rf.me, rf.logEntries)
 	}
-	_, lastIndex := rf.lastLogTermIndex()
+	lastIndex := len(rf.logEntries) - 1
 	reply.NextIndex = lastIndex + 1
 	reply.Success = true
 
-	// 5. 更新rf.commitIndex
-	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
 	if args.LeaderCommit > rf.commitIndex {
 		rf.commitIndex = args.LeaderCommit
 		if args.LeaderCommit > lastIndex {
