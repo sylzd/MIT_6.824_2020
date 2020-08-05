@@ -119,7 +119,7 @@ PASS
 
 - [x] 实现`Start()`, 先通过基本的测试`TestBasicAgree2B`,然后按照论文图2，写`AppendEntries`的RPC代码，完成log的发送和接收功能
 - [x] 实现选举的限制，参考论文`section 5.4.1`
-- [ ] One way to fail to reach agreement in the early Lab 2B tests is to hold repeated elections even though the leader is alive. Look for bugs in election timer management, or not sending out heartbeats immediately after winning an election.（这段话，暂时没看懂，到时候结合代码看一下TODO）
+- [x] 测试过程中如果发现有leader或者，仍在发生选举. 可以看下electiontimer的管理机制，或者不要在选举胜利后立马发送心跳.（这里应该说的是Timer的issue问题，我没有遇到）
 - [x] 在`for-loop`这样的重复性事件检查代码中，加入一些小停顿,如`sync.cond`,或完成一次直接睡一会儿`time.Sleep(10 * time.Millisecond)`(循环读取applyCh)
 - [x] 可以多重构几次自己的代码，让代码更干净，参考 [structure](https://pdos.csail.mit.edu/6.824/labs/raft-structure.txt), [locking](https://pdos.csail.mit.edu/6.824/labs/raft-locking.txt), and [guide](https://thesquareplanet.com/blog/students-guide-to-raft/) 页面 （尤其是完成一些大测试之后，可以去掉无用的代码，便于下次测试通过）
 - [x] 运行测试`time go test -run 2B`
