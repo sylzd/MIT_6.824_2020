@@ -15,11 +15,15 @@
       2. etcd
       3. mongodb（v3.2及以上，raft-like（secondary拉取等））
 
-2. 提高对分布式系统的理解程度，能完成相关项目调试/调优/开发，提高服务质量。
+2. 提高个人及团队对分布式系统的理解程度，能完成相关项目调试/调优/开发，提高服务质量。
    1. 帮助大家进一步理解内部项目
    2. 帮助大家理解分布式数据库的一些重要配置及其对业务的影响（如mongodb的读写concern等）
 
+3. 个人实验项目
 
+   https://github.com/sylzd/MIT_6.824_2020/tree/master/lab2_raft
+
+   
 
 ## 学前班
 
@@ -68,7 +72,7 @@
    - 节点之间交流的方式
    - 最基础的有两个
    - - `RequestVote`: candidate对其他follower发起投票
-     - `AppendEntries`: leader将日志复制给其他follower、
+     - `AppendEntries`: leader将日志复制给其他follower
 
    
 
@@ -91,7 +95,7 @@
 
    
 
-3. 概览
+3. 概览（实验中需要实现的点大都在这张图里）
 
 ![2E5F875B-90F5-4D4B-A84E-B5F620A43C5B](/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/2E5F875B-90F5-4D4B-A84E-B5F620A43C5B.png)
 

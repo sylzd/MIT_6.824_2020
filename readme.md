@@ -60,6 +60,22 @@
 
 详细实验过程，可以`cd lab2_raft`
 
+### 通过论文及github项目了解raft的大致原理及一些开源实现或应用
+- 论文: https://pdos.csail.mit.edu/6.824/papers/raft-extended.pdf 
+  - 尤其关注图2
+  - 本次实验会实现本片论文大部分的思想
+- 注意点：
+  - https://thesquareplanet.com/blog/students-guide-to-raft/ TODO
+  - 多线程编程的安全性`cd ../../14.sync_and_concurrency.md`
+  -  
+- 项目: https://raft.github.io/
+- 个人关注项目：
+  - consul依赖的raft: https://github.com/hashicorp/raft
+  - tidb依赖的raft: https://github.com/tikv/tikv
+  - etcd依赖的raft: https://github.com/etcd-io/etcd
+- raft算法分享：[raft算法分享](./raft/raft算法分享.md)
+
+
 ### 2A实验过程或需要注意的点
 
 实现`选举` 和 `心跳`（(`AppendEntries` RPCs with no log entries)）
