@@ -170,7 +170,7 @@ Test (2B): RPC counts aren't too high ...
   ... Passed --   2.7  3   90   25924   12
 --- PASS: TestCount2B (2.71s)
 PASS
-ok      _/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft    24.437s
+ok      _/Users/lzd/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft    24.437s
 ```
 
 

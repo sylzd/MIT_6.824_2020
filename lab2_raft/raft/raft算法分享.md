@@ -4,9 +4,9 @@
 
 
 
-## 背景（为什么要学习并分享）
+## 背景及说明（为什么要学习并分享）
 
-1. 使用广泛，几乎可以用在所有需要强一致性的分布式系统上。虽说每个工业实现都略有区别，但是整体思想基本变化不大。
+1. 使用广泛，服务治理、分布式协调、分布式存储等。虽说每个工业实现都略有区别，但是整体思想都是基于原始论文的基础上优化。
    1. 已经上线的内部项目
       1. orchestrator高可用项目
       2. consul服务发现项目
@@ -23,7 +23,8 @@
 
    https://github.com/sylzd/MIT_6.824_2020/tree/master/lab2_raft
 
-   
+4. 本次分享暂时不考虑成员变更的情况 
+
 
 ## 学前班
 
@@ -49,7 +50,7 @@
 
    在分布式系统中指基于复制状态机模型中的一个**负责执行状态命令，维护状态信息**的一个抽象名词，可以简化理解为高可用集群中的一个节点，这些节点通过一致的初始状态+一致的状态变化达到状态的完全一致。
 
-   <img src="/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/AB654777-9C7D-4D7E-AD61-700DE56B372B.png" alt="AB654777-9C7D-4D7E-AD61-700DE56B372B" style="zoom:50%;" />
+   <img src="./AB654777-9C7D-4D7E-AD61-700DE56B372B.png" alt="AB654777-9C7D-4D7E-AD61-700DE56B372B" style="zoom:50%;" />
 
    
 
@@ -63,7 +64,7 @@
    - 之前的leader从灾难中恢复，会发现自己的任期小于当前任期数，主动退化为follower
    - 普通节点follwer不会接受，任期小于自己当前任期的请求
 
-   <img src="/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/0F64EE18-3738-4FAF-A5C1-8F961653A866.png" alt="0F64EE18-3738-4FAF-A5C1-8F961653A866" style="zoom:50%;" />
+   <img src="./0F64EE18-3738-4FAF-A5C1-8F961653A866.png" alt="0F64EE18-3738-4FAF-A5C1-8F961653A866" style="zoom:50%;" />
 
    
 
@@ -97,7 +98,7 @@
 
 3. 概览（实验中需要实现的点大都在这张图里）
 
-![2E5F875B-90F5-4D4B-A84E-B5F620A43C5B](/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/2E5F875B-90F5-4D4B-A84E-B5F620A43C5B.png)
+![2E5F875B-90F5-4D4B-A84E-B5F620A43C5B](./2E5F875B-90F5-4D4B-A84E-B5F620A43C5B.png)
 
 
 
