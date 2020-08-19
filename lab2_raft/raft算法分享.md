@@ -103,7 +103,7 @@ https://github.com/sylzd/MIT_6.824_2020/tree/master/lab2_raft
 
   - 所有进程（客户端）**看到的**读写操作顺序都保持一致。
 
-    <img src="/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/image-20200813013242246.png" alt="image-20200813013242246" style="zoom:25%;" />
+    <img src="./raft/image-20200813013242246.png" alt="image-20200813013242246" style="zoom:25%;" />
 
 - 因果一致性（Causal consistency）:  通过提高并行率来提高性能，如MongoDB-3.6（读写Concern都是Majority时），朋友圈评论可见性在跨数据中心同步上的应用
 
@@ -203,7 +203,7 @@ leader, follower, candidate
 
 - 设计图：（实验中需要实现的点大都在这张图里）
 
-![2E5F875B-90F5-4D4B-A84E-B5F620A43C5B](./2E5F875B-90F5-4D4B-A84E-B5F620A43C5B.png)
+![2E5F875B-90F5-4D4B-A84E-B5F620A43C5B](./raft/img/2E5F875B-90F5-4D4B-A84E-B5F620A43C5B.png)
 
 
 
@@ -294,7 +294,7 @@ leader通过心跳机制	与follower保持联系，并在心跳中带上需要Ap
 
 2. leader挂掉: 会发生不一致的情况（详细情况如下图）
 
-   <img src="/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/B5BB98E8-FD48-4C35-BA7E-7FCD1C09EEF3.png" alt="B5BB98E8-FD48-4C35-BA7E-7FCD1C09EEF3" style="zoom: 50%;" />
+   <img src="./raft/img/B5BB98E8-FD48-4C35-BA7E-7FCD1C09EEF3.png" alt="B5BB98E8-FD48-4C35-BA7E-7FCD1C09EEF3" style="zoom: 50%;" />
    
    a. follower的日志仅仅比leader少1个条目, 比较正常的情况
    
@@ -578,7 +578,7 @@ func (rf *Raft) persist() {
 
     从3个节点切成5个节点，由于每个节点切换成员配置或加入集群的时间不一样，导致在图中的方框时间切面，出现了分裂，S1、S2形成一个集群，S3、S4、S5形成一个集群。此时如果S2挂掉，那么S1会选自己当leader，S3、S4、S5也会选一个leader如S5；那么这个term就会产生两个leader
 
-  <img src="/Users/lzd/Dropbox/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/raft/4427265A-0536-411A-BFA8-D90E7B82CC0B.png" alt="4427265A-0536-411A-BFA8-D90E7B82CC0B" style="zoom: 50%;" />
+  <img src="./raft/img/4427265A-0536-411A-BFA8-D90E7B82CC0B.png" alt="4427265A-0536-411A-BFA8-D90E7B82CC0B" style="zoom: 50%;" />
 
   - 联合共识的两阶段配置更改法
     
