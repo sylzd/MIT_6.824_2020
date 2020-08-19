@@ -220,7 +220,7 @@ ok      _/Users/lzd/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/
 
 实现`崩溃恢复`，需要需要持久化一些state状态（图2已经表明了哪些状态需要持久化）。每次变更都需要持久化这些状态`SaveRaftState()` ，并在重启的时候重新加载`ReadRaftState()`。这个在`persister.go`中实现`Persister`对象
 
-- [ ] 实现`raft.go`中的`persist()`和`readPersist()`, 用`labgob`序列化状态，并传给`Persister`
+- [x] 实现`raft.go`中的`persist()`和`readPersist()`, 用`labgob`序列化状态，并传给`Persister`
 - [ ] 把`persist()`插入到每次状态变更的地方，插一次测试一次
 - [ ] 最好定时清理掉`老log`,否则可能爆内存，对后面实验有影响
 - [ ] 2C的很多测试是关于服务不可用或丢失RPC请求或返回的测试
@@ -231,5 +231,8 @@ ok      _/Users/lzd/mi_work/proj/test/gogogo/15.distribute_6.824_2020/lab2_raft/
 #### 测试结果
 
 ```
-
+=== RUN   TestPersist12C
+Test (2C): basic persistence ...
+  ... Passed --   5.8  3  176   42304    6
+--- PASS: TestPersist12C (5.75s)
 ```

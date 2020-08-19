@@ -59,6 +59,7 @@ func (rf *Raft) SendHeartbeat(server int) {
 
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
+	defer rf.persist()
 
 	// 目标是自己: 重置时间后return
 	if rf.me == server {
@@ -157,6 +158,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	DPrintf("rf:%d term:%d get leader:%d AppendEntries Args: %+v, my log: %+v commited:%d", rf.me, rf.term, args.LeaderId, args, rf.logEntries, rf.commitIndex)
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
+	defer rf.persist()
 
 	// Followers Rule 1: Respond to RPCs from candidates and leaders
 	// 每次收到leader的rpc(心跳/日志)，都重置一下, 以免自己发起选举或下次选举
@@ -194,6 +196,7 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 
 	// 3 一致性检查(leader crash 会出现)：follower历史日志与新的append日志冲突，则删掉冲突日志及之后的所有日志，且leader[followerID].NextIndex回退到剩余日志的末尾
 	// If an existing entry conflicts with a new one (same index but different terms), delete the existing entry and all that follow it (§5.3)
+	// TODO 这里是不是要从commit后面的日志开始检查？
 	for _, entry := range args.Entries {
 		if entry.Index < len(rf.logEntries) && rf.logEntries[entry.Index].Term != entry.Term {
 			rf.logEntries = rf.logEntries[:entry.Index]
@@ -213,7 +216,6 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 
 	// 5. 成功复制新日志后更新rf.commitIndex
 	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
-	// TODO: 较小概率出现过TestReJoin2B失败的情况，复现了再说
 	rf.logEntries = append(rf.logEntries, args.Entries...)
 	if len(args.Entries) != 0 {
 		DPrintf("rf follower: %d, log entries: %+v", rf.me, rf.logEntries)

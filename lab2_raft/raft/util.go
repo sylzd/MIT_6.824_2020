@@ -11,7 +11,7 @@ import (
 const Debug = 0
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
-	if Debug > 1 {
+	if Debug > 0 {
 		//log.Printf(format, a...)
 		pretty.Logf(format+"\n", a...)
 	}
@@ -19,7 +19,7 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 }
 
 func DDPrintf(format string, a ...interface{}) (n int, err error) {
-	if Debug > 3 {
+	if Debug > 1 {
 		//log.Printf(format, a...)
 		pretty.Logf(format+"\n", a...)
 	}

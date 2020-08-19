@@ -47,6 +47,7 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	rf.mu.Lock()
 	DPrintf("rf:%d get RequestVote(%+v) my log:%+v", rf.me, args, rf.logEntries)
 	defer rf.mu.Unlock()
+	defer rf.persist()
 
 	reply.Term = rf.term
 	reply.VoteGranted = false
@@ -153,6 +154,7 @@ func (rf *Raft) startElection() bool {
 	//TODO: 锁不能加全函数，选举期间要能接收客户端请求
 	DPrintf("raft:%d startElection() lock", rf.me)
 	defer rf.mu.Unlock()
+	defer rf.persist()
 	resetTimer(rf.electionTimer, ElectionTimeout)
 	if rf.role == Leader {
 		return false

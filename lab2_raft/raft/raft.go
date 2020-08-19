@@ -1,11 +1,13 @@
 package raft
 
 import (
+	"bytes"
 	"fmt"
 	"sync"
 	"sync/atomic"
 	"time"
 
+	"../labgob"
 	"../labrpc"
 )
 
@@ -59,12 +61,14 @@ const (
 // A Go object implementing a single Raft peer.
 //
 type Raft struct {
-	mu        sync.Mutex          // Lock to protect shared access to this peer's state
-	peers     []*labrpc.ClientEnd // RPC end points of all peers
-	persister *Persister          // Object to hold this peer's persisted state
-	me        int                 // this peer's index into peers[]
-	dead      int32               // set by Kill()
-	role      Role
+	mu            sync.Mutex          // Lock to protect shared access to this peer's state
+	peers         []*labrpc.ClientEnd // RPC end points of all peers
+	persister     *Persister          // Object to hold this peer's persisted state
+	me            int                 // this peer's index into peers[]
+	dead          int32               // set by Kill()
+	role          Role
+	applyCh       chan ApplyMsg
+	electionTimer *time.Timer
 
 	// Your data here (2A, 2B, 2C).
 	// Look at the paper's Figure 2 for a description of what
@@ -74,7 +78,6 @@ type Raft struct {
 	term       int // the same as currentTerm: latest term server has seen (initialized to 0 on first boot, increases monotonically)
 	votedFor   int // candidateId that received vote in current term (none or initialized to -1)
 	logEntries []LogEntry
-	applyCh    chan ApplyMsg
 
 	// Volatile state on All Servers
 	commitIndex int // index of highest log entry known to be committed (initialized to 0, increases monotonically
@@ -84,7 +87,6 @@ type Raft struct {
 	nextIndex  []int // for each server, index of the next log entry to send to that server (initialized to leader last log index + 1)
 	matchIndex []int // for each server, index of highest log entry known to be replicated on server (initialized to 0, increases monotonically)
 
-	electionTimer *time.Timer
 }
 
 // return currentTerm and whether this server
@@ -116,6 +118,13 @@ func (rf *Raft) persist() {
 	// e.Encode(rf.yyy)
 	// data := w.Bytes()
 	// rf.persister.SaveRaftState(data)
+	w := new(bytes.Buffer)
+	e := labgob.NewEncoder(w)
+	e.Encode(rf.term)
+	e.Encode(rf.votedFor)
+	e.Encode(rf.logEntries)
+	data := w.Bytes()
+	rf.persister.SaveRaftState(data)
 }
 
 //
@@ -159,6 +168,7 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 		Index:   index,
 	})
 	rf.matchIndex[rf.me] = index
+	rf.persist()
 
 	return index, term, isLeader
 }
@@ -193,17 +203,20 @@ func (rf *Raft) readPersist(data []byte) {
 	}
 	// Your code here (2C).
 	// Example:
-	// r := bytes.NewBuffer(data)
-	// d := labgob.NewDecoder(r)
-	// var xxx
-	// var yyy
-	// if d.Decode(&xxx) != nil ||
-	//    d.Decode(&yyy) != nil {
-	//   error...
-	// } else {
-	//   rf.xxx = xxx
-	//   rf.yyy = yyy
-	// }
+	r := bytes.NewBuffer(data)
+	d := labgob.NewDecoder(r)
+	var term int
+	var votedFor int
+	var logEntries []LogEntry
+	if d.Decode(&term) != nil ||
+		d.Decode(&votedFor) != nil ||
+		d.Decode(&logEntries) != nil {
+		DPrintf("error readPersist()")
+	} else {
+		rf.term = term
+		rf.votedFor = votedFor
+		rf.logEntries = logEntries
+	}
 }
 
 //
@@ -232,6 +245,7 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	// votedFor 初始化为-1，每一轮选举后都重置为-1
 	rf.votedFor = -1
 	rf.role = Follower
+	rf.readPersist(persister.ReadRaftState())
 	// 初始化1个空日志占位索引0
 	if len(rf.logEntries) == 0 {
 		rf.logEntries = append(rf.logEntries, LogEntry{
